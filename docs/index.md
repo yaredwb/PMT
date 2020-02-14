@@ -3,10 +3,7 @@ layout: default
 title: Porous Media Theory
 ---
 
-Porous Media Theory
-===================
-
-In this chapter, fundamental concepts and formulations in porous media
+The fundamental concepts and formulations in porous media
 theory are presented. The discussion starts with a brief history of
 porous media theory. The volume fraction concept and kinematic relations
 are then presented. Conservation laws are derived in a general form
@@ -106,16 +103,27 @@ $ \chi^\alpha $ such that $$\chi^\alpha(\mathbf r, t) = \begin{cases}
 0 & \text{for} \quad \mathbf r \in \rmd V_\rmgamma, \quad \beta \neq \gamma.
 \end{cases}$$ Thus, the partial volume of constituent $ \alpha $ in the
 control volume can be written as
-$$\rmd V^\alpha(\mathbf x,t) =\int_{\rmd V} \chi^\alpha(\mathbf r, t) \rmd V_\rmbeta.$$
+
+$$
+\rmd V^\alpha(\mathbf x,t) =\int_{\rmd V} \chi^\alpha(\mathbf r, t) \rmd V_\rmbeta.
+$$
+
 The volume fraction $ n^\alpha $ of phase $ \alpha $ can now be defined
 as
-$$n^\alpha (\mathbf x,t) = \frac{\rmd V^\alpha}{\rmd V} = \frac{1}{\rmd V} \int_{\rmd V} \chi^\alpha(\mathbf r, t) \rmd V_\rmbeta.$$
+$$
+n^\alpha (\mathbf x,t) = \frac{\rmd V^\alpha}{\rmd V} = \frac{1}{\rmd V} \int_{\rmd V} \chi^\alpha(\mathbf r, t) \rmd V_\rmbeta.
+$$
+
 The position vector $ \mathbf r $ may be written in terms of the global
 position vector $ \mathbf x $ by introducing a local reference system
 $ \mathbf \xi $ with origin at $ \mathbf x $, such that
 $ \mathbf r = \mathbf x + \mathbf \xi $. The individual volumes of the constituents
 and their volume fractions satisfy the conditions
-$$\sum\limits_{\alpha=1}^{N} \rmd V^\alpha = \rmd V \quad \text{and} \quad \sum\limits_{\alpha=1}^{N} n^\alpha = 1.$$
+
+$$
+\sum\limits_{\alpha=1}^{N} \rmd V^\alpha = \rmd V \quad \text{and} \quad \sum\limits_{\alpha=1}^{N} n^\alpha = 1.
+$$
+
 The volume fractions can now be used to describe the relationship
 between the densities of the constituents of the porous medium at
 microscopic and macroscopic levels. We denote the intrinsic real density
@@ -126,7 +134,10 @@ terms of the volume fraction of the phase under consideration is given
 by $$\rho^\alpha(\mathbf x,t) = n^\alpha(\mathbf x,t) \rho_\alpha(\mathbf x,t).
 \label{e:partialdensities}$$ The total density of the mixture $ \rho $
 is then the sum of the partial densities of all constituents i.e.
-$$\rho(\mathbf x,t) = \sum\limits_{\alpha=1}^{N} \rho^\alpha(\mathbf x,t).$$
+
+$$
+\rho(\mathbf x,t) = \sum\limits_{\alpha=1}^{N} \rho^\alpha(\mathbf x,t).
+$$
 
 Kinematics {#s:kinematics}
 ----------
@@ -143,21 +154,37 @@ simultaneously occupied by all phases. Let $ \mathbf X^\alpha $ be the
 reference position of phase $ \alpha $ at time $ t=t_\rmo $. The
 position of each material point $ \mathbf x^\alpha $ of phase $ \alpha $ at
 time $ t $ may be written in a Lagrangian description as
-$$\begin{aligned}
+
+$$
+\begin{aligned}
 \mathbf x^\alpha = \mathbf x^\alpha(\mathbf X^\alpha,t).
-\label{e:lagrangian}\end{aligned}$$ An Eulerian description of motion
-may be written for a non-singular Lagrangian description as
-$$\begin{aligned}
+\label{e:lagrangian}
+\end{aligned}
+$$
+
+An Eulerian description of motion may be written for a non-singular Lagrangian description as
+
+$$
+\begin{aligned}
 \mathbf X^\alpha = \mathbf X^\alpha(\mathbf x^\alpha,t).
-\label{e:eulerian}\end{aligned}$$ For a particle of phase $ \alpha $
-with a defined path, Lagrangian descriptions of the velocity and
-acceleration are $$\begin{aligned}
+\label{e:eulerian}
+\end{aligned}
+$$ 
+
+For a particle of phase $ \alpha $ with a defined path, Lagrangian descriptions of the velocity and
+acceleration are 
+
+$$
+\begin{aligned}
 \begin{split}
 \mathbf V^\alpha &= \frac{\partial \mathbf x^\alpha(\mathbf X^\alpha,t)}{\partial t} \\
 \mathbf A^\alpha &= \frac{\partial^2 \mathbf x^\alpha(\mathbf X^\alpha,t)}{\partial t^2}.
 \end{split}
-\label{e:lagrangianVA}\end{aligned}$$ Eulerian description of the
-velocity and acceleration may be derived by using in . Given an Eulerian
+\label{e:lagrangianVA}
+\end{aligned}
+$$ 
+
+Eulerian description of the velocity and acceleration may be derived by using in . Given an Eulerian
 description of the velocity $ \mathbf v^\alpha(\mathbf x^\alpha,t) $, the
 Eulerian acceleration $ \mathbf a^\alpha $ may be derived by evaluating the
 time derivative of the velocity where the Lagrangian coordinates are

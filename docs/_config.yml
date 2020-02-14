@@ -1,6 +1,6 @@
 theme: jekyll-theme-cayman
 title: Porous Media Theory
-description: Summary for Coupled Problems in Porous Media
+description: Summary for Coupled Problems in Science and Engineering
 markdown: kramdown
 kramdown:
     math_engine: mathjax
