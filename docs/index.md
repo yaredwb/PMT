@@ -3,29 +3,6 @@ layout: default
 title: Porous Media Theory
 ---
 
-\newcommand{\rmc}{{\mathrm{c}}}
-\newcommand{\rmd}{{\mathrm{d}}}
-\newcommand{\rmf}{{\mathrm{f}}}
-\newcommand{\rmi}{{\mathrm{i}}}
-\newcommand{\rml}{{\mathrm{l}}}
-\newcommand{\rmm}{{\mathrm{m}}}
-\newcommand{\rmo}{{\mathrm{o}}}
-\newcommand{\rms}{{\mathrm{s}}}
-\newcommand{\rmv}{{\mathrm{v}}}
-\newcommand{\rmw}{{\mathrm{w}}}
-\newcommand{\rmT}{{\mathrm{T}}}
-\newcommand{\rmu}{{\mathrm{u}}}
-\newcommand{\rmp}{{\mathrm{p}}}
-\newcommand{\rme}{{\mathrm{e}}}
-\newcommand{\rmr}{{\mathrm{r}}}
-\newcommand{\rmy}{{\mathrm{y}}}
-\newcommand{\rmth}{{\mathrm{th}}}
-\newcommand{\rmef}{{\mathrm{eff}}}
-\newcommand{\rmprime}{{\mathrm{\prime}}}
-\newcommand{\rmbeta}{{\mathrm{\beta}}}
-\newcommand{\rmgamma}{{\mathrm{\gamma}}}
-\newcommand{\rmD}{{\mathrm{D}}}
-
 Porous Media Theory
 ===================
 
