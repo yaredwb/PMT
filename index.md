@@ -6,6 +6,8 @@ bibliography: pmt.bib
 
 #### Author: [Yared W. Bekele](https://yaredwb.com/)
 
+### Abstract
+
 The fundamental concepts and formulations in porous media
 theory are presented. The discussion starts with a brief history of
 porous media theory. The volume fraction concept and kinematic relations
