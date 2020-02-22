@@ -1,7 +1,10 @@
 ---
 layout: default
 title: Porous Media Theory
+bibliography: pmt.bib
 ---
+
+#### Author: [Yared W. Bekele](https://yaredwb.com/)
 
 The fundamental concepts and formulations in porous media
 theory are presented. The discussion starts with a brief history of
