@@ -95,7 +95,7 @@ $$
 \end{aligned}
 $$ 
 
-Eulerian description of the velocity and acceleration may be derived by using \tag{ref1} in . Given an Eulerian description of the velocity $$ \mathbf v^\alpha(\mathbf x^\alpha,t) $$, the Eulerian acceleration $$ \mathbf a^\alpha $$ may be derived by evaluating the time derivative of the velocity where the Lagrangian coordinates are held constant. That is, by applying the chain rule
+Eulerian description of the velocity and acceleration may be derived by using  in . Given an Eulerian description of the velocity $$ \mathbf v^\alpha(\mathbf x^\alpha,t) $$, the Eulerian acceleration $$ \mathbf a^\alpha $$ may be derived by evaluating the time derivative of the velocity where the Lagrangian coordinates are held constant. That is, by applying the chain rule
 
 $$
 \mathbf a^\alpha = \frac{\partial \mathbf v^\alpha}{\partial t} + \nabla \mathbf v^\alpha \cdot \mathbf v^\alpha.
@@ -551,7 +551,13 @@ $$\mathbf q = -\mathbf \lambda \nabla T
 \label{e:fourierslaw}
 $$ 
 
-where $$ \mathbf \lambda $$ is the effective thermal conductivity matrix of the porous medium and $$ T $$ is the temperature. For isotropic thermal conductivity in a medium, the above equation becomes $$\mathbf q = -\lambda \nabla T$$ where $$ \lambda $$ is the effective thermal conductivity coefficient which is a function of the individual thermal conductivities of the constituents of the porous medium and their volume fractions. Fourier’s law has a similar form both at the microscopic and macroscopic levels, [@coussy2004poromechanics].
+where $$ \mathbf \lambda $$ is the effective thermal conductivity matrix of the porous medium and $$ T $$ is the temperature. For isotropic thermal conductivity in a medium, the above equation becomes 
+
+$$
+\mathbf q = -\lambda \nabla T
+$$
+
+where $$ \lambda $$ is the effective thermal conductivity coefficient which is a function of the individual thermal conductivities of the constituents of the porous medium and their volume fractions. Fourier’s law has a similar form both at the microscopic and macroscopic levels, [@coussy2004poromechanics].
 
 Constitutive Laws
 -----------------
@@ -578,7 +584,7 @@ $$
 where $$ n^\mathrm{f} $$ is the volume fraction of the fluid and $$ \mathbf \sigma_\mathrm{f} $$ is the pore fluid stress. However, a distinction should be made between the partial stress of the solid phase $$ \mathbf \sigma^\mathrm{s} $$ and the effective stress $$ \mathbf \sigma^\mathrm{\prime} $$; this has been discussed, for example, by [@prevost1980mechanics]. The partial stress of the solid phase is given by 
 
 $$
-\mathbf \sigma^\mathrm{s} = \mathbf \sigma^\mathrm{p}rime + n^\mathrm{s} \mathbf \sigma_\mathrm{f}
+\mathbf \sigma^\mathrm{s} = \mathbf \sigma^\mathrm{\prime} + n^\mathrm{s} \mathbf \sigma_\mathrm{f}
 $$
 
 where $$ n^\mathrm{s} \mathbf \sigma_\mathrm{f} $$ takes into account the effect of the pore fluid stress on the individual solid grains of the porous medium. It is assumed, in the above equation, that the contact areas between the solid grains are negligible such that the pore fluid surrounds each grain. Each solid grain is subjected to intergranular forces that are in
@@ -708,8 +714,7 @@ $$
 \label{e:partialdensities_sf}
 $$ 
 
-where $$ n^\mathrm{s} $$ and $$ n^\mathrm{f} $$ are the volume fractions of the solid and fluid, respectively, and $$ \rho_\mathrm{s} $$ and $$ \rho_\mathrm{f} $$ are their real densities at the microscopic level. For a fluid-saturated porous medium, we have $$n^\mathrm{s} + n^\mathrm{f} = 1.$$ For simplicity in the following sections, we set $$ n^\mathrm{f} = n $$ and
-$ n^\mathrm{s} = 1-n $$. We will refer to $$ n $$ as the porosity of the material.
+where $$ n^\mathrm{s} $$ and $$ n^\mathrm{f} $$ are the volume fractions of the solid and fluid, respectively, and $$ \rho_\mathrm{s} $$ and $$ \rho_\mathrm{f} $$ are their real densities at the microscopic level. For a fluid-saturated porous medium, we have $$n^\mathrm{s} + n^\mathrm{f} = 1.$$ For simplicity in the following sections, we set $$ n^\mathrm{f} = n $$ and $$ n^\mathrm{s} = 1-n $$. We will refer to $$ n $$ as the porosity of the material.
 
 ### Hydraulic Processes ($$ p $$ or $$ p\text{-}v $$ Formulation)
 
@@ -739,8 +744,7 @@ $$
 \label{e:fluiddensitydt}
 $$ 
 
-The porosity remains constant if there are no mechanical deformations i.e. $$ \frac{\partial n}{\partial t} = 0 $$. With this, and neglecting any spatial variations in the fluid density (i.e.
-$ \nabla \rho^\mathrm{f} = 0 $),  reduces to
+The porosity remains constant if there are no mechanical deformations i.e. $$ \frac{\partial n}{\partial t} = 0 $$. With this, and neglecting any spatial variations in the fluid density (i.e. $$ \nabla \rho^\mathrm{f} = 0 $$),  reduces to
 
 $$
 \frac{\partial \rho_\mathrm{f}}{\partial t} + \rho_\mathrm{f} \nabla \cdot \mathbf v^\mathrm{f} = 0.
@@ -759,15 +763,14 @@ $$
 \mathbf w = n (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) = n \mathbf v^\mathrm{f} 
 $$ 
 
-with no mechanical deformations ($$ \mathbf v^\mathrm{s} = \mathbf 0 $). Using  and , the fluid
-mass balance equation for a constant hydraulic conductivity ($$ k_\mathrm{r}=1 $$) can be written as
+with no mechanical deformations ($$ \mathbf v^\mathrm{s} = \mathbf 0 $$). Using  and , the fluid mass balance equation for a constant hydraulic conductivity ($$ k_\mathrm{r}=1 $$) can be written as
 
 $$
 \nabla \cdot \left[ -\frac{1}{\gamma_\mathrm{f}} \mathbf k  \cdot (\nabla p^\mathrm{f} - \rho_\mathrm{f} \mathbf b) \right]  = 0
 \label{e:masbalfluidsteady}
 $$ 
 
-where $$ \gamma_\mathrm{f} $$ is the unit weight of the fluid. The only flow driving forces considered here are the fluid pressure $$ p^\mathrm{f} $$ and the body forces $$ \mathbf b $. The equation above governs the steady-state flow of fluid in a porous medium and may be
+where $$ \gamma_\mathrm{f} $$ is the unit weight of the fluid. The only flow driving forces considered here are the fluid pressure $$ p^\mathrm{f} $$ and the body forces $$ \mathbf b $$. The equation above governs the steady-state flow of fluid in a porous medium and may be
 solved for the pressure as the unknown, resulting in the so called $$ p $$-formulation.
 
 For a compressible fluid, the temporal variation of the fluid density needs to be taken into account. For instance, if our fluid is water, from the equation of state for water in  we may write
@@ -878,7 +881,7 @@ $$
 
 For coupled hydro-mechanical (HM) processes in a porous medium, the mass balance equation in  and the linear momentum balance equation in  can be solved simultaneously for the displacement and pressure field variables. This results in what is known as a $$ u\text{-}p $$ formulation. Sometimes these equations are solved simultaneously with Darcy’s equation to obtain the displacement, pressure and Darcy’s velocity, leading to the so-called $$ u\text{-}p\text{-}v $$ formulation.
 
-### Thermo-Hydro-Mechanical Processes ($ u\text{-}p\text{-}T $$ Formulation)
+### Thermo-Hydro-Mechanical Processes ($$ u\text{-}p\text{-}T $$ Formulation)
 
 Thermo-hydro-mechanical (THM) processes in a porous medium couple heat transfer and fluid flow with the deformation of solid. The governing equations describing the coupling are derived by superposition of the individual linear momentum, mass and energy balance equations of
 constituent phases.
