@@ -36,25 +36,25 @@ Volume Fraction Concept
 
 One of the most important concepts in the development of porous media theory is the volume fraction concept. This concept is used to a idealize a porous medium with multiple constituents as a homogeneous continuum. An important assumption in the volume fraction concept is that the solid constituent of the porous medium is considered as a reference volume such that only the fluid constituents can enter or leave the reference volume; see [@bluhm1997volume].
 
-Consider a porous medium composed of $$ N $$ constituents. Let $$ V $$ be the total volume of he porous medium and $$ V^\alpha $$ be the volume of phase $$ \alpha $$. Let $$ \mathrm{d}V $$ be a control volume element in the total volume and $$ \mathbf x $$ be its position vector in a global coordinate system at a given time $$ t $$. Similarly, let $$ \mathbf r $$ be the position vector of a microscopic volume element $$ \mathrm{d} V_\mathrm{beta} $$ inside $$ \mathrm{d}V  $$. The volume of constituent $$ \alpha $$ within the control volume can be determined by first defining a phase distribution function $$ \chi^\alpha $$ such that 
+Consider a porous medium composed of $$ N $$ constituents. Let $$ V $$ be the total volume of he porous medium and $$ V^\alpha $$ be the volume of phase $$ \alpha $$. Let $$ \mathrm{d}V $$ be a control volume element in the total volume and $$ \mathbf x $$ be its position vector in a global coordinate system at a given time $$ t $$. Similarly, let $$ \mathbf r $$ be the position vector of a microscopic volume element $$ \mathrm{d} V_\mathrm{\beta} $$ inside $$ \mathrm{d}V  $$. The volume of constituent $$ \alpha $$ within the control volume can be determined by first defining a phase distribution function $$ \chi^\alpha $$ such that 
 
 $$
 \chi^\alpha(\mathbf r, t) = \begin{cases}
-1 & \text{for} \quad \mathbf r \in \mathrm{d} V_\mathrm{beta} \\
-0 & \text{for} \quad \mathbf r \in \mathrm{d} V_\mathrm{gamma}, \quad \beta \neq \gamma.
+1 & \text{for} \quad \mathbf r \in \mathrm{d} V_\mathrm{\beta} \\
+0 & \text{for} \quad \mathbf r \in \mathrm{d} V_\mathrm{\gamma}, \quad \beta \neq \gamma.
 \end{cases}
 $$ 
 
 Thus, the partial volume of constituent $$ \alpha $$ in the control volume can be written as
 
 $$
-\mathrm{d} V^\alpha(\mathbf x,t) =\int_{\mathrm{d} V} \chi^\alpha(\mathbf r, t) \mathrm{d} V_\mathrm{beta}.
+\mathrm{d} V^\alpha(\mathbf x,t) =\int_{\mathrm{d} V} \chi^\alpha(\mathbf r, t) \mathrm{d} V_\mathrm{\beta}.
 $$
 
-The volume fraction $$ n^\alpha $$ of phase $$ \alpha $$ can now be defined
-as
+The volume fraction $$ n^\alpha $$ of phase $$ \alpha $$ can now be defined as
+
 $$
-n^\alpha (\mathbf x,t) = \frac{\mathrm{d} V^\alpha}{\mathrm{d} V} = \frac{1}{\mathrm{d} V} \int_{\mathrm{d} V} \chi^\alpha(\mathbf r, t) \mathrm{d} V_\mathrm{beta}.
+n^\alpha (\mathbf x,t) = \frac{\mathrm{d} V^\alpha}{\mathrm{d} V} = \frac{1}{\mathrm{d} V} \int_{\mathrm{d} V} \chi^\alpha(\mathbf r, t) \mathrm{d} V_\mathrm{\beta}.
 $$
 
 The position vector $$ \mathbf r $$ may be written in terms of the global position vector $$ \mathbf x $$ by introducing a local reference system $$ \mathbf \xi $$ with origin at $$ \mathbf x $$, such that $$ \mathbf r = \mathbf x + \mathbf \xi $$. The individual volumes of the constituents and their volume fractions satisfy the conditions
@@ -63,7 +63,13 @@ $$
 \sum\limits_{\alpha=1}^{N} \mathrm{d} V^\alpha = \mathrm{d} V \quad \text{and} \quad \sum\limits_{\alpha=1}^{N} n^\alpha = 1.
 $$
 
-The volume fractions can now be used to describe the relationship between the densities of the constituents of the porous medium at microscopic and macroscopic levels. We denote the intrinsic real density of constituent $$ \alpha $$ by $$ \rho_\alpha $$ and the partial density at macroscale by $$ \rho^\alpha $$, following the notations according to [@prevost1980mechanics]. The relationship between these two densities in terms of the volume fraction of the phase under consideration is given by $$\rho^\alpha(\mathbf x,t) = n^\alpha(\mathbf x,t) \rho_\alpha(\mathbf x,t). \label{e:partialdensities}$$ The total density of the mixture $$ \rho $$ is then the sum of the partial densities of all constituents i.e.
+The volume fractions can now be used to describe the relationship between the densities of the constituents of the porous medium at microscopic and macroscopic levels. We denote the intrinsic real density of constituent $$ \alpha $$ by $$ \rho_\alpha $$ and the partial density at macroscale by $$ \rho^\alpha $$, following the notations according to [@prevost1980mechanics]. The relationship between these two densities in terms of the volume fraction of the phase under consideration is given by 
+
+$$
+\rho^\alpha(\mathbf x,t) = n^\alpha(\mathbf x,t) \rho_\alpha(\mathbf x,t). \label{e:partialdensities}
+$$ 
+
+The total density of the mixture $$ \rho $$ is then the sum of the partial densities of all constituents i.e.
 
 $$
 \rho(\mathbf x,t) = \sum\limits_{\alpha=1}^{N} \rho^\alpha(\mathbf x,t).
