@@ -8,6 +8,12 @@ bibliography: pmt.bib
 
 ### Abstract
 
+$$ \newcommand{\rmd}{\mathrm{d}} $$
+
+$$
+\rmd = f(x,y)
+$$
+
 The fundamental concepts and formulations in porous media
 theory are presented. The discussion starts with a brief history of
 porous media theory. The volume fraction concept and kinematic relations
