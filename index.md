@@ -6,29 +6,6 @@ bibliography: pmt.bib
 
 #### Author: [Yared W. Bekele](https://yaredwb.com/)
 
-$$ \newcommand{\rmc}{{\mathrm{c}}} $$
-$$ \newcommand{\rmd}{{\mathrm{d}}} $$
-$$ \newcommand{\rmf}{{\mathrm{f}}} $$
-$$ \newcommand{\rmi}{{\mathrm{i}}} $$
-$$ \newcommand{\rml}{{\mathrm{l}}} $$
-$$ \newcommand{\rmm}{{\mathrm{m}}} $$
-$$ \newcommand{\rmo}{{\mathrm{o}}} $$
-$$ \newcommand{\rms}{{\mathrm{s}}} $$
-$$ \newcommand{\rmv}{{\mathrm{v}}} $$
-$$ \newcommand{\rmw}{{\mathrm{w}}} $$
-$$ \newcommand{\rmT}{{\mathrm{T}}} $$
-$$ \newcommand{\rmu}{{\mathrm{u}}} $$
-$$ \newcommand{\rmp}{{\mathrm{p}}} $$
-$$ \newcommand{\rme}{{\mathrm{e}}} $$
-$$ \newcommand{\rmr}{{\mathrm{r}}} $$
-$$ \newcommand{\rmy}{{\mathrm{y}}} $$
-$$ \newcommand{\rmth}{{\mathrm{th}}} $$
-$$ \newcommand{\rmef}{{\mathrm{eff}}} $$
-$$ \newcommand{\rmprime}{{\mathrm{\prime}}} $$
-$$ \newcommand{\rmbeta}{{\mathrm{\beta}}} $$
-$$ \newcommand{\rmgamma}{{\mathrm{\gamma}}} $$
-$$ \newcommand{\rmD}{{\mathrm{D}}} $$
-
 ### Abstract
 
 The fundamental concepts and formulations in porous media
@@ -120,26 +97,26 @@ leave the reference volume; see [@bluhm1997volume].
 
 Consider a porous medium composed of $ N $ constituents. Let $ V $ be
 the total volume of the porous medium and $ V^\alpha $ be the volume of
-phase $ \alpha $. Let $ \rmd V $ be a control volume element in the
+phase $ \alpha $. Let $ \mathrm{d} V $ be a control volume element in the
 total volume and $ \mathbf x $ be its position vector in a global coordinate
 system at a given time $ t $. Similarly, let $ \mathbf r $ be the position
-vector of a microscopic volume element $ \rmd V_\rmbeta $ inside
-$ \rmd V $. The volume of constituent $ \alpha $ within the control
+vector of a microscopic volume element $ \mathrm{d} V_\mathrm{beta} $ inside
+$ \mathrm{d} V $. The volume of constituent $ \alpha $ within the control
 volume can be determined by first defining a phase distribution function
 $ \chi^\alpha $ such that $$\chi^\alpha(\mathbf r, t) = \begin{cases}
-1 & \text{for} \quad \mathbf r \in \rmd V_\rmbeta \\
-0 & \text{for} \quad \mathbf r \in \rmd V_\rmgamma, \quad \beta \neq \gamma.
+1 & \text{for} \quad \mathbf r \in \mathrm{d} V_\mathrm{beta} \\
+0 & \text{for} \quad \mathbf r \in \mathrm{d} V_\rmgamma, \quad \beta \neq \gamma.
 \end{cases}$$ Thus, the partial volume of constituent $ \alpha $ in the
 control volume can be written as
 
 $$
-\rmd V^\alpha(\mathbf x,t) =\int_{\rmd V} \chi^\alpha(\mathbf r, t) \rmd V_\rmbeta.
+\mathrm{d} V^\alpha(\mathbf x,t) =\int_{\mathrm{d} V} \chi^\alpha(\mathbf r, t) \mathrm{d} V_\mathrm{beta}.
 $$
 
 The volume fraction $ n^\alpha $ of phase $ \alpha $ can now be defined
 as
 $$
-n^\alpha (\mathbf x,t) = \frac{\rmd V^\alpha}{\rmd V} = \frac{1}{\rmd V} \int_{\rmd V} \chi^\alpha(\mathbf r, t) \rmd V_\rmbeta.
+n^\alpha (\mathbf x,t) = \frac{\mathrm{d} V^\alpha}{\mathrm{d} V} = \frac{1}{\mathrm{d} V} \int_{\mathrm{d} V} \chi^\alpha(\mathbf r, t) \mathrm{d} V_\mathrm{beta}.
 $$
 
 The position vector $ \mathbf r $ may be written in terms of the global
@@ -149,7 +126,7 @@ $ \mathbf r = \mathbf x + \mathbf \xi $. The individual volumes of the constitue
 and their volume fractions satisfy the conditions
 
 $$
-\sum\limits_{\alpha=1}^{N} \rmd V^\alpha = \rmd V \quad \text{and} \quad \sum\limits_{\alpha=1}^{N} n^\alpha = 1.
+\sum\limits_{\alpha=1}^{N} \mathrm{d} V^\alpha = \mathrm{d} V \quad \text{and} \quad \sum\limits_{\alpha=1}^{N} n^\alpha = 1.
 $$
 
 The volume fractions can now be used to describe the relationship
@@ -179,7 +156,7 @@ According to the volume fraction concept, a porous medium composed of
 $ N $ constituents is approximated as a homogeneous continuum. Thus, a
 material point defined by the position vector $ \mathbf x $ is
 simultaneously occupied by all phases. Let $ \mathbf X^\alpha $ be the
-reference position of phase $ \alpha $ at time $ t=t_\rmo $. The
+reference position of phase $ \alpha $ at time $ t=t_\mathrm{o} $. The
 position of each material point $ \mathbf x^\alpha $ of phase $ \alpha $ at
 time $ t $ may be written in a Lagrangian description as
 
@@ -226,13 +203,13 @@ chosen phase. If the Eulerian description of
 $ f^\alpha =  f^\alpha (\mathbf x^\alpha,t) $ is given, its material time
 derivative with respect to a moving particle of phase $ \alpha $ is
 defined by
-$$\frac{\rmD_\alpha f^\alpha}{\rmD t} := \frac{\partial f^\alpha}{\partial t} + \nabla f^\alpha \cdot \mathbf v^\alpha.
+$$\frac{\mathrm{d}_\alpha f^\alpha}{\mathrm{d} t} := \frac{\partial f^\alpha}{\partial t} + \nabla f^\alpha \cdot \mathbf v^\alpha.
 \label{e:mtdwrtalpha}$$ The material time derivative of $ f^\alpha $
 with respect to a moving particle of another phase, say phase $ \beta $,
 is defined as
-$$\frac{\rmD_\beta f^\alpha}{\rmD t} := \frac{\partial f^\alpha}{\partial t} + \nabla f^\alpha \cdot \mathbf v^\beta.
+$$\frac{\mathrm{d}_\beta f^\alpha}{\mathrm{d} t} := \frac{\partial f^\alpha}{\partial t} + \nabla f^\alpha \cdot \mathbf v^\beta.
 \label{e:mtdwrtbeta}$$ Equations and  result in the relation
-$$\frac{\rmD_\beta f^\alpha}{\rmD t} = \frac{\rmD_\alpha f^\alpha}{\rmD t} + \nabla f^\alpha \cdot \mathbf v^{\beta \alpha}
+$$\frac{\mathrm{d}_\beta f^\alpha}{\mathrm{d} t} = \frac{\mathrm{d}_\alpha f^\alpha}{\mathrm{d} t} + \nabla f^\alpha \cdot \mathbf v^{\beta \alpha}
 \label{e:mtdwrtbetarel}$$ where
 $$\mathbf v^{\beta \alpha} = \mathbf v^\beta - \mathbf v^\alpha$$ is the relative
 velocity of a particle of phase $ \beta $ with respect to phase
@@ -245,16 +222,16 @@ phase $ \alpha $ per unit volume, the total time derivative over a
 volume $ V $ is given according to Reynold’s transport theorem by
 $$\begin{aligned}
 \begin{split}
-\frac{d}{dt} \int_{V} \mathbf f^\alpha \rmd V &= \int_{V} \left( \frac{\partial \mathbf f^\alpha}{\partial t} + \nabla \mathbf f^\alpha \cdot \mathbf v^\alpha + \mathbf f^\alpha \nabla \cdot \mathbf v^\alpha \right) \rmd V \\
-&= \int_{V} \left[ \frac{\partial \mathbf f^\alpha}{\partial t} + \nabla \cdot \left( \mathbf f^\alpha \otimes \mathbf v^\alpha \right)  \right] \rmd V.
+\frac{d}{dt} \int_{V} \mathbf f^\alpha \mathrm{d} V &= \int_{V} \left( \frac{\partial \mathbf f^\alpha}{\partial t} + \nabla \mathbf f^\alpha \cdot \mathbf v^\alpha + \mathbf f^\alpha \nabla \cdot \mathbf v^\alpha \right) \mathrm{d} V \\
+&= \int_{V} \left[ \frac{\partial \mathbf f^\alpha}{\partial t} + \nabla \cdot \left( \mathbf f^\alpha \otimes \mathbf v^\alpha \right)  \right] \mathrm{d} V.
 \end{split}
 \label{e:transporttheorem}\end{aligned}$$ For a scalar physical property
 $ f^\alpha $ per unit volume, we have
-$$\frac{d}{dt} \int_{V} f^\alpha \rmd V = \int_{V} \left[ \frac{\partial f^\alpha}{\partial t} + \nabla \cdot \left( f^\alpha \mathbf v^\alpha \right)  \right] \rmd V.$$
+$$\frac{d}{dt} \int_{V} f^\alpha \mathrm{d} V = \int_{V} \left[ \frac{\partial f^\alpha}{\partial t} + \nabla \cdot \left( f^\alpha \mathbf v^\alpha \right)  \right] \mathrm{d} V.$$
 Applying the divergence theorem, we get the expression
-$$\frac{d}{dt} \int_{V} f^\alpha \rmd V = \int_{V} \frac{\partial f^\alpha}{\partial t} \rmd V + \int_{\partial V} f^\alpha \mathbf v^\alpha \cdot \mathbf n \rmd A$$
+$$\frac{d}{dt} \int_{V} f^\alpha \mathrm{d} V = \int_{V} \frac{\partial f^\alpha}{\partial t} \mathrm{d} V + \int_{\partial V} f^\alpha \mathbf v^\alpha \cdot \mathbf n \mathrm{d} A$$
 where $ \partial V $ is the boundary of the domain $ V $ and $ \mathbf n $
-is the outward unit normal to the surface $ \rmd A $.
+is the outward unit normal to the surface $ \mathrm{d} A $.
 
 The spatial velocity gradient of phase $ \alpha $,
 $$\mathbf L^\alpha = \nabla \mathbf v^\alpha,$$ can be decomposed into symmetric
@@ -292,25 +269,25 @@ rate of change of mass be equal to any other mass of that phase being
 added to or leaving from the system, internally from other constituents
 or externally from other sources. The rate of change of mass
 $ M^\alpha $ of phase $ \alpha $ over a domain $ V $ is described by
-$$\frac{\rmD_\alpha M^\alpha}{\rmD t} = \frac{\rmD_\alpha}{\rmD t} \int_{V} \rho^\alpha \rmd V$$
+$$\frac{\mathrm{d}_\alpha M^\alpha}{\mathrm{d} t} = \frac{\mathrm{d}_\alpha}{\mathrm{d} t} \int_{V} \rho^\alpha \mathrm{d} V$$
 and mass conservation requires this rate to be balanced with all mass
 exchanges among other phases, i.e.
-$$\frac{\rmD_\alpha}{\rmD t} \int_{V} \rho^\alpha \rmd V + \sum_{\beta} M^{\beta\alpha} = 0$$
+$$\frac{\mathrm{d}_\alpha}{\mathrm{d} t} \int_{V} \rho^\alpha \mathrm{d} V + \sum_{\beta} M^{\beta\alpha} = 0$$
 where the second term in the above equation represents the sum of mass
 exchanges per unit volume from all phases $ \beta $ to phase $ \alpha $.
 Applying Reynold’s transport theorem to the rate of change of
 $ M^\alpha $, a generalized mass balance equation for phase $ \alpha $
 can be written as
-$$\frac{\rmD_\alpha \rho^\alpha}{\rmD t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + \sum_{\beta} M^{\beta\alpha} = 0.
+$$\frac{\mathrm{d}_\alpha \rho^\alpha}{\mathrm{d} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + \sum_{\beta} M^{\beta\alpha} = 0.
 \label{e:masbalalpha}$$ The general mass balance equation for a porous
 medium with $ N $ constituents is then obtained by summation of the
 individual mass balance equations for each phase i.e.
-$$\sum\limits_{\alpha=1}^{N} \left[ \frac{\rmD_\alpha \rho^\alpha}{\rmD t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + \sum_{\beta} M^{\beta\alpha} \right] = 0.$$
+$$\sum\limits_{\alpha=1}^{N} \left[ \frac{\mathrm{d}_\alpha \rho^\alpha}{\mathrm{d} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + \sum_{\beta} M^{\beta\alpha} \right] = 0.$$
 The mass exchange term between the phases has the constraint
 $$\sum\limits_{\alpha=1}^{N} \sum_{\beta} M^{\beta\alpha} = 0
 \label{e:massconstraint}$$ when summed over all the $ N $ constituents
 of the mixture, reducing the overall mass balance equation to
-$$\sum\limits_{\alpha=1}^{N} \left[ \frac{\rmD_\alpha \rho^\alpha}{\rmD t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha \right] = 0.$$
+$$\sum\limits_{\alpha=1}^{N} \left[ \frac{\mathrm{d}_\alpha \rho^\alpha}{\mathrm{d} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha \right] = 0.$$
 In , the motion of a particle of phase $ \alpha $ is expressed relative
 to the same phase. In practice, it is more convenient to take one of the
 phases (usually the solid phase) as a reference to describe the motion
@@ -325,16 +302,16 @@ that the material time derivative its momentum $ \mathbf P^\alpha $ be in
 equilibrium with the sum of all internal interaction forces and external
 forces. The rate of change of momentum over a domain $ V $ is described
 by
-$$\frac{\rmD_\alpha \mathbf P^\alpha}{\rmD t} = \frac{\rmD_\alpha}{\rmD t} \int_{V} \rho^\alpha \mathbf v^\alpha \rmd V$$
+$$\frac{\mathrm{d}_\alpha \mathbf P^\alpha}{\mathrm{d} t} = \frac{\mathrm{d}_\alpha}{\mathrm{d} t} \int_{V} \rho^\alpha \mathbf v^\alpha \mathrm{d} V$$
 and the balance of linear momentum requires
-$$\frac{\rmD_\alpha}{\rmD t} \int_{V} \rho^\alpha \mathbf v^\alpha \rmd V + \sum_{\beta} \mathbf P^{\beta\alpha} = \mathbf F^\alpha$$
+$$\frac{\mathrm{d}_\alpha}{\mathrm{d} t} \int_{V} \rho^\alpha \mathbf v^\alpha \mathrm{d} V + \sum_{\beta} \mathbf P^{\beta\alpha} = \mathbf F^\alpha$$
 where the second term represents the sum internal momentum exchanges
 over time to phase $ \alpha $ from all other phases $ \beta $ and
 $ \mathbf F^\alpha $ represents external forces. The external forces involve
 body forces $ \rho^\alpha \mathbf b^\alpha $ acting on the constituents over
 the volume $ V $ and surface forces $ \mathbf t^\alpha $ acting on the
 boundary $ \partial V $ i.e.
-$$\mathbf F^\alpha = \int_{V} \rho^\alpha \mathbf b^\alpha \rmd V + \int_{\partial V} \mathbf t^\alpha \rmd A
+$$\mathbf F^\alpha = \int_{V} \rho^\alpha \mathbf b^\alpha \mathrm{d} V + \int_{\partial V} \mathbf t^\alpha \mathrm{d} A
 \label{e:externalforces}$$ Cauchy’s stress tensor $ \mathbf \sigma^\alpha $
 and the surface tractions $ \mathbf t^\alpha $ of phase $ \alpha $ are
 related by $$\mathbf t^\alpha = \mathbf \sigma^\alpha \mathbf n$$ where $ \mathbf n $ is
@@ -365,16 +342,16 @@ material time derivative of the angular momentum is equal to the moments
 of all external forces where the moments are referred to a certain fixed
 point. The angular momentum $ \mathbf H^\alpha $ of phase $ \alpha $ is
 given by
-$$\mathbf H^\alpha = \int_{V} \mathbf x \times \rho^\alpha \mathbf v^\alpha \rmd V$$
+$$\mathbf H^\alpha = \int_{V} \mathbf x \times \rho^\alpha \mathbf v^\alpha \mathrm{d} V$$
 where $ \mathbf x $ is a position vector to the fixed point. The moment of
 the external forces using  is given by
-$$\mathbf M^\alpha = \int_{V} \mathbf x \times \rho^\alpha \mathbf b^\alpha \rmd V + \int_{\partial V} \mathbf x \times \mathbf t^\alpha \rmd A.$$
+$$\mathbf M^\alpha = \int_{V} \mathbf x \times \rho^\alpha \mathbf b^\alpha \mathrm{d} V + \int_{\partial V} \mathbf x \times \mathbf t^\alpha \mathrm{d} A.$$
 Angular momentum balance requires
-$$\frac{\rmD_\alpha}{\rmD t} \int_{V} \mathbf x \times \rho^\alpha \mathbf v^\alpha \rmd V = \int_{V} \mathbf x \times \rho^\alpha \mathbf b^\alpha \rmd V + \int_{\partial V} \mathbf x \times \mathbf t^\alpha \rmd A$$
+$$\frac{\mathrm{d}_\alpha}{\mathrm{d} t} \int_{V} \mathbf x \times \rho^\alpha \mathbf v^\alpha \mathrm{d} V = \int_{V} \mathbf x \times \rho^\alpha \mathbf b^\alpha \mathrm{d} V + \int_{\partial V} \mathbf x \times \mathbf t^\alpha \mathrm{d} A$$
 where the moment of the exchanged momentum between the phases is
 omitted. Simplifying the above equation by applying the mass balance and
 momentum balance principles derived earlier gives
-$$\int_{V} \mathbf x \times \rho^\alpha \mathbf a^\alpha \rmd V = \int_{V} \mathbf x \times \rho^\alpha \mathbf a^\alpha \rmd V + \int_{V} \mathbf I \times \mathbf \sigma^\alpha \rmd V$$
+$$\int_{V} \mathbf x \times \rho^\alpha \mathbf a^\alpha \mathrm{d} V = \int_{V} \mathbf x \times \rho^\alpha \mathbf a^\alpha \mathrm{d} V + \int_{V} \mathbf I \times \mathbf \sigma^\alpha \mathrm{d} V$$
 where $ \mathbf I $ is the identity tensor. The above equation requires
 $$\mathbf I \times \mathbf \sigma^\alpha = \mathbf 0$$ and this is satisfied if
 $$\mathbf \sigma^\alpha = (\mathbf \sigma^\alpha)^\intercal.$$ The total stress
@@ -392,7 +369,7 @@ The law of conservation of energy, the first law of thermodynamics,
 requires that the rate of change of the internal and kinetic energies be
 balanced by the rate of mechanical work and heat. For phase $ \alpha $
 in a porous medium, this is written mathematically as
-$$\frac{\rmD_\alpha E^\alpha}{\rmD t} + \frac{\rmD_\alpha K^\alpha}{\rmD t} + \sum\limits_{\beta} E^{\beta \alpha} = W^\alpha + H^\alpha
+$$\frac{\mathrm{d}_\alpha E^\alpha}{\mathrm{d} t} + \frac{\mathrm{d}_\alpha K^\alpha}{\mathrm{d} t} + \sum\limits_{\beta} E^{\beta \alpha} = W^\alpha + H^\alpha
 \label{e:thermodynamics}$$ where $ E^\alpha $ is the internal energy,
 $ K^\alpha $ is the kinetic energy, $ E^{\beta \alpha} $ is the rate of
 internal energy exchange from all other phases $ \beta $ to phase
@@ -400,10 +377,10 @@ $ \alpha $, $ W^\alpha $ is the rate of mechanical energy or work and
 $ H^\alpha $ is the rate of heat energy. For a given domain $ V $, we
 have $$\begin{aligned}
 \begin{split}
-E^\alpha &= \int_{V} \rho^\alpha e^\alpha \rmd V \\
-K^\alpha &= \int_{V} \frac{1}{2 }\rho^\alpha \mathbf v^\alpha \cdot \mathbf v^\alpha \rmd V \\
-W^\alpha &= \int_{V} \mathbf v^\alpha \cdot \rho^\alpha \mathbf b^\alpha \rmd V + \int_{\partial V} \mathbf v^\alpha \cdot \mathbf t^\alpha  \rmd A \\
-H^\alpha &= \int_{V} \rho^\alpha h^\alpha \rmd V - \int_{\partial V} \mathbf q^\alpha \rmd A
+E^\alpha &= \int_{V} \rho^\alpha e^\alpha \mathrm{d} V \\
+K^\alpha &= \int_{V} \frac{1}{2 }\rho^\alpha \mathbf v^\alpha \cdot \mathbf v^\alpha \mathrm{d} V \\
+W^\alpha &= \int_{V} \mathbf v^\alpha \cdot \rho^\alpha \mathbf b^\alpha \mathrm{d} V + \int_{\partial V} \mathbf v^\alpha \cdot \mathbf t^\alpha  \mathrm{d} A \\
+H^\alpha &= \int_{V} \rho^\alpha h^\alpha \mathrm{d} V - \int_{\partial V} \mathbf q^\alpha \mathrm{d} A
 \end{split}
 \label{e:energies}\end{aligned}$$ where $ e^\alpha = e^\alpha(\mathbf x,t) $
 is the specific internal energy $ \alpha, h^\alpha = h^\alpha(\mathbf x,t) $
@@ -415,18 +392,18 @@ Using  in , simplifying the material time derivatives of the integrals
 and utilizing the mass and linear momentum balance equations in  and ,
 the energy balance equation for phase $ \alpha $ becomes
 $$\begin{aligned}
-\rho^\alpha \frac{\rmD_\alpha e^\alpha}{\rmD t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) + \rho^\alpha \mathbf v^\alpha \cdot \mathbf a^\alpha - \mathbf \sigma^\alpha : \mathbf L^\alpha  \\
+\rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) + \rho^\alpha \mathbf v^\alpha \cdot \mathbf a^\alpha - \mathbf \sigma^\alpha : \mathbf L^\alpha  \\
 - \mathbf v^\alpha \cdot \left( \nabla \cdot \mathbf \sigma^\alpha + \rho^\alpha \mathbf b^\alpha \right) + \nabla \cdot \mathbf q^\alpha + \sum\limits_{\beta} E^{\beta \alpha} = Q^\alpha
 \end{aligned}
 \label{e:enebalalpha}$$ where $ Q^\alpha = \rho^\alpha h^\alpha $ is the
 heat supply to phase $ \alpha $. The overall energy balance equation is
 obtained by summation of the individual energy balance equations of the
 constituents of the porous medium i.e. $$\begin{aligned}
-\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\rmD_\alpha e^\alpha}{\rmD t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) + \rho^\alpha \mathbf v^\alpha \cdot \mathbf a^\alpha - \mathbf \sigma^\alpha : \mathbf L^\alpha \right. \\
+\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) + \rho^\alpha \mathbf v^\alpha \cdot \mathbf a^\alpha - \mathbf \sigma^\alpha : \mathbf L^\alpha \right. \\
 - \left. \mathbf v^\alpha \cdot \left( \nabla \cdot \mathbf \sigma^\alpha + \rho^\alpha \mathbf b^\alpha \right) + \nabla \cdot \mathbf q^\alpha + \sum\limits_{\beta} E^{\beta \alpha} \right] = \sum\limits_{\alpha=1}^{N} Q^\alpha.
 \end{aligned}$$ If the momentum exchange between the phases is assumed
 to be zero, the energy balance equation reduces to $$\begin{aligned}
-\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\rmD_\alpha e^\alpha}{\rmD t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) - \mathbf \sigma^\alpha : \mathbf L^\alpha \right. \\
+\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) - \mathbf \sigma^\alpha : \mathbf L^\alpha \right. \\
 + \left. \nabla \cdot \mathbf q^\alpha + \sum\limits_{\beta} E^{\beta \alpha} \right] = \sum\limits_{\alpha=1}^{N} Q^\alpha.
 \end{aligned}
 \label{e:enebal}$$ The total heat supply and total heat flux can be
@@ -435,7 +412,7 @@ $$Q = \sum\limits_{\alpha=1}^{N} Q^\alpha \quad \text{and} \quad \mathbf q = \su
 and a constraint on the energy exchange between the phases is introduced
 as $$\sum\limits_{\alpha=1}^{N} \sum_{\beta} E^{\beta\alpha} = 0.$$ This
 reduces the energy balance equation to
-$$\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\rmD_\alpha e^\alpha}{\rmD t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) - \mathbf \sigma^\alpha : \mathbf L^\alpha \right] + \nabla \cdot \mathbf q  = Q.$$
+$$\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) - \mathbf \sigma^\alpha : \mathbf L^\alpha \right] + \nabla \cdot \mathbf q  = Q.$$
 
 Thermodynamics and Phase Change
 -------------------------------
@@ -454,15 +431,15 @@ constituents is both a necessary and sufficient condition,
 [@de2006trends].
 
 For phase $ \alpha $, let
-$$S^\alpha = \int_{V} \rho^\alpha s^\alpha \rmd V$$ be its entropy where
+$$S^\alpha = \int_{V} \rho^\alpha s^\alpha \mathrm{d} V$$ be its entropy where
 $ s^\alpha $ is the specific entropy. With $ T^\alpha $ as the absolute
 temperature of phase $ \alpha $, the entropy inequality for all the
 constituents of the porous medium is expressed as
-$$\sum\limits_{\alpha=1}^{N} \frac{\rmD_\alpha S^\alpha}{\rmD t} \geq \sum\limits_{\alpha=1}^{N} \int_{V} \frac{1}{T^\alpha} \rho^\alpha h^\alpha \rmd V - \sum\limits_{\alpha=1}^{N} \int_{\partial V} \frac{1}{T^\alpha} \mathbf q^\alpha \cdot \rmd A.$$
+$$\sum\limits_{\alpha=1}^{N} \frac{\mathrm{d}_\alpha S^\alpha}{\mathrm{d} t} \geq \sum\limits_{\alpha=1}^{N} \int_{V} \frac{1}{T^\alpha} \rho^\alpha h^\alpha \mathrm{d} V - \sum\limits_{\alpha=1}^{N} \int_{\partial V} \frac{1}{T^\alpha} \mathbf q^\alpha \cdot \mathrm{d} A.$$
 Performing the material time derivative in the above equation using the
 transport theorem, utilizing the mass balance equation and the
 divergence theorem, the local form of the entropy inequality becomes
-$$\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\rmD_\alpha s^\alpha}{\rmD t} - \sum\limits_{\beta} M^{\beta \alpha} s^\alpha - \frac{1}{T^\alpha} \rho^\alpha h^\alpha + \nabla \cdot \left( \frac{1}{T^\alpha} \mathbf q^\alpha \right) \right] \geq 0.
+$$\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{d}_\alpha s^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} s^\alpha - \frac{1}{T^\alpha} \rho^\alpha h^\alpha + \nabla \cdot \left( \frac{1}{T^\alpha} \mathbf q^\alpha \right) \right] \geq 0.
 \label{e:entropyineq}$$ The entropy inequality may also be written as a
 function of the Helmholtz free energy
 $$\psi^\alpha = e^\alpha - T^\alpha s^\alpha$$ together with the energy
@@ -490,8 +467,8 @@ freezing/melting. The exchange of quantities during phase change remains
 constrained. For instance, the mass balance equations for the individual
 constituents, according to , are given by $$\begin{aligned}
 \begin{split}
-\frac{\rmD_\alpha \rho^\alpha}{\rmD t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + M^{\beta\alpha} &= 0 \\
-\frac{\rmD_\beta \rho^\beta}{\rmD t} + \rho^\beta \nabla \cdot \mathbf v^\beta + M^{\alpha\beta} &= 0
+\frac{\mathrm{d}_\alpha \rho^\alpha}{\mathrm{d} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + M^{\beta\alpha} &= 0 \\
+\frac{\mathrm{d}_\beta \rho^\beta}{\mathrm{d} t} + \rho^\beta \nabla \cdot \mathbf v^\beta + M^{\alpha\beta} &= 0
 \end{split}\end{aligned}$$ wherein the sum on the mass exchange term is
 omitted since we have only one phase contributing to the mass of
 another. The constraint in  implies
@@ -518,22 +495,22 @@ required to be in equilibrium, i.e. $$\mu^\alpha = \mu^\beta.$$ The
 chemical potentials are a function of the specific entropies, the
 specific volumes, the pressures and the temperatures of the phases. In
 terms of these quantities, we have
-$$-(s^\alpha - s^\beta)\rmd T + v^\alpha \rmd p^\alpha - v^\beta \rmd p^\beta = 0$$
+$$-(s^\alpha - s^\beta)\mathrm{d} T + v^\alpha \mathrm{d} p^\alpha - v^\beta \mathrm{d} p^\beta = 0$$
 where $ s^\alpha $ and $ s^\beta $ are the specific entropies of the
 phases, $ v^\alpha $ and $ v^\beta $ their specific volumes,
 $ p^\alpha $ and $ p^\beta $ the pressures and $ T $ is the temperature,
 assuming the same temperature for both phases. The equation above may be
 rearranged to give
-$$\rmd p^\beta = \frac{v^\alpha}{v^\beta}\rmd p^\alpha - \frac{1}{v^\beta}(s^\alpha - s^\beta)\rmd T.$$
+$$\mathrm{d} p^\beta = \frac{v^\alpha}{v^\beta}\mathrm{d} p^\alpha - \frac{1}{v^\beta}(s^\alpha - s^\beta)\mathrm{d} T.$$
 In terms of the densities $ \rho^\alpha = 1/v^\alpha $ and
 $ \rho^\beta = 1/v^\beta $, we have
-$$\rmd p^\beta = \frac{\rho^\beta}{\rho^\alpha}\rmd p^\alpha - \rho^\beta(s^\alpha - s^\beta)\rmd T.
+$$\mathrm{d} p^\beta = \frac{\rho^\beta}{\rho^\alpha}\mathrm{d} p^\alpha - \rho^\beta(s^\alpha - s^\beta)\mathrm{d} T.
 \label{e:clausius1}$$ The change in entropy between the phases under
 constant pressure and temperature may be expressed as
 $$s^\alpha - s^\beta = \frac{L}{T}$$ where $ L $ is the specific latent
 heat which depends on the type of phase change that occurs e.g. latent
 heat of fusion for melting. Using this in  gives
-$$\rmd p^\beta = \frac{\rho^\beta}{\rho^\alpha}\rmd p^\alpha - \frac{\rho^\beta L}{T}\rmd T.
+$$\mathrm{d} p^\beta = \frac{\rho^\beta}{\rho^\alpha}\mathrm{d} p^\alpha - \frac{\rho^\beta L}{T}\mathrm{d} T.
 \label{e:clausius2}$$
 
 Conduction Laws
@@ -553,30 +530,30 @@ saturated porous media from the fluid momentum balance equation, see for
 instance [@whitaker1986flow].
 
 Darcy’s law relates the flow of fluid in a porous medium with respect to
-the solid phase as $$\mathbf w = n^\rmf (\mathbf v^\rmf - \mathbf v^\rms)$$ where
-$ n^\rmf $ is the volume fraction of the fluid, $ \mathbf v^\rmf $ is the
-fluid velocity and $ \mathbf v^\rms $ is the solid velocity. A more general
+the solid phase as $$\mathbf w = n^\mathrm{f} (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s})$$ where
+$ n^\mathrm{f} $ is the volume fraction of the fluid, $ \mathbf v^\mathrm{f} $ is the
+fluid velocity and $ \mathbf v^\mathrm{s} $ is the solid velocity. A more general
 form of Darcy’s law, considering the relative permeability of a phase in
 a medium where the permeability varies, is given by
-$$\mathbf w = \frac{k_\rmr}{\mu} \mathbf \kappa  \cdot (\nabla p^\rmf - \rho_\rmf \mathbf b - \rho_\rmf \mathbf a^\rms - \rho_\rmf \mathbf a^{\rmf \rms})$$
-where $ k_\rmr $ is the relative permeability coefficient varying
+$$\mathbf w = \frac{k_\mathrm{r}}{\mu} \mathbf \kappa  \cdot (\nabla p^\mathrm{f} - \rho_\mathrm{f} \mathbf b - \rho_\mathrm{f} \mathbf a^\mathrm{s} - \rho_\mathrm{f} \mathbf a^{\mathrm{f} \mathrm{s}})$$
+where $ k_\mathrm{r} $ is the relative permeability coefficient varying
 between 0 and 1, $ \mu $ is the viscosity of the fluid, $ \mathbf \kappa $
-is the intrinsic permeability matrix of the material, $ p^\rmf $ is the
+is the intrinsic permeability matrix of the material, $ p^\mathrm{f} $ is the
 fluid pressure, $ \mathbf b $ represents body forces, $ \mathbf a^s $ is the
-acceleration of the solid phase and $ \mathbf a^{\rmf \rms} $ is the
+acceleration of the solid phase and $ \mathbf a^{\mathrm{f} \mathrm{s}} $ is the
 relative acceleration between the fluid and solid phases. The tortuosity
 of the pores is sometimes considered in the Darcy equation. If the
 inertia terms are neglected, Darcy’s law reduces to
-$$\mathbf w = \frac{k_\rmr}{\mu} \mathbf \kappa  \cdot (\nabla p^\rmf - \rho_\rmf \mathbf b).
+$$\mathbf w = \frac{k_\mathrm{r}}{\mu} \mathbf \kappa  \cdot (\nabla p^\mathrm{f} - \rho_\mathrm{f} \mathbf b).
 \label{e:Darcyslaw0}$$ It is common to express Darcy’s law in terms of
 the hydraulic conductivity matrix $ \mathbf k $ instead of the intrinsic
 permeability matrix $ \mathbf \kappa $, where the two are related by
-$$\mathbf k = \frac{\rho_\rmf g}{\mu} \mathbf \kappa
+$$\mathbf k = \frac{\rho_\mathrm{f} g}{\mu} \mathbf \kappa
 \label{e:permandhydcond}$$ in which $ g $ is the acceleration due to
 gravity. This results in
-$$\mathbf w = \frac{k_\rmr}{\rho_\rmf g} \mathbf k  \cdot (\nabla p^\rmf - \rho_\rmf \mathbf b)
+$$\mathbf w = \frac{k_\mathrm{r}}{\rho_\mathrm{f} g} \mathbf k  \cdot (\nabla p^\mathrm{f} - \rho_\mathrm{f} \mathbf b)
 \label{e:Darcyslaw}$$ wherein we have kept the same relative coefficient
-$ k_\rmr $ for hydraulic conductivity that varies with the porosity and
+$ k_\mathrm{r} $ for hydraulic conductivity that varies with the porosity and
 degree of fluid saturation of the porous medium.
 
 ### Fourier’s Law
@@ -619,25 +596,25 @@ the stress that effectively causes solid deformation, hence the name,
 from all other stresses in the mixture. If we consider a porous medium
 composed of two phases, solid (s) and fluid (f), the total stress as the
 sum of the partial stresses is given according to $ _1 $ by
-$$\mathbf \sigma = \mathbf \sigma^\rms + \mathbf \sigma^\rmf.
+$$\mathbf \sigma = \mathbf \sigma^\mathrm{s} + \mathbf \sigma^\mathrm{f}.
 \label{e:totalstress_sf}$$ The partial stresses corresponding to the
 fluid phase, using the volume fraction concept, can be written us
-$$\mathbf \sigma^\rmf = n^\rmf \mathbf \sigma_\rmf$$ where $ n^\rmf $ is the
-volume fraction of the fluid and $ \mathbf \sigma_\rmf $ is the pore fluid
+$$\mathbf \sigma^\mathrm{f} = n^\mathrm{f} \mathbf \sigma_\mathrm{f}$$ where $ n^\mathrm{f} $ is the
+volume fraction of the fluid and $ \mathbf \sigma_\mathrm{f} $ is the pore fluid
 stress. However, a distinction should be made between the partial stress
-of the solid phase $ \mathbf \sigma^\rms $ and the effective stress
-$ \mathbf \sigma^\rmprime $; this has been discussed, for example, by
+of the solid phase $ \mathbf \sigma^\mathrm{s} $ and the effective stress
+$ \mathbf \sigma^\mathrm{p}rime $; this has been discussed, for example, by
 [@prevost1980mechanics]. The partial stress of the solid phase is given
-by $$\mathbf \sigma^\rms = \mathbf \sigma^\rmprime + n^\rms \mathbf \sigma_\rmf$$
-where $ n^\rms \mathbf \sigma_\rmf $ takes into account the effect of the
+by $$\mathbf \sigma^\mathrm{s} = \mathbf \sigma^\mathrm{p}rime + n^\mathrm{s} \mathbf \sigma_\mathrm{f}$$
+where $ n^\mathrm{s} \mathbf \sigma_\mathrm{f} $ takes into account the effect of the
 pore fluid stress on the individual solid grains of the porous medium.
 It is assumed, in the above equation, that the contact areas between the
 solid grains are negligible such that the pore fluid surrounds each
 grain. Each solid grain is subjected to intergranular forces that are in
 excess of the pore fluid stress and this is characterized by the
-effective stress $ \mathbf \sigma^\rmprime $. The total stress for a
+effective stress $ \mathbf \sigma^\mathrm{p}rime $. The total stress for a
 fluid-saturated porous medium is then given by
-$$\mathbf \sigma = \mathbf \sigma^\rms + \mathbf \sigma^\rmf = \mathbf \sigma^\rmprime + \mathbf \sigma_\rmf.
+$$\mathbf \sigma = \mathbf \sigma^\mathrm{s} + \mathbf \sigma^\mathrm{f} = \mathbf \sigma^\mathrm{p}rime + \mathbf \sigma_\mathrm{f}.
 \label{e:effstress}$$
 
 ### Stress-Strain Relations
@@ -645,31 +622,31 @@ $$\mathbf \sigma = \mathbf \sigma^\rms + \mathbf \sigma^\rmf = \mathbf \sigma^\r
 A constitutive equation for the solid phase relates the effective stress
 and the strain. The constitutive stress-strain relation in a general
 form may be expressed as
-$$\rmd \mathbf \sigma^\prime = \mathbf D (\rmd \mathbf \varepsilon - \rmd \mathbf \varepsilon^\rmc - \rmd \mathbf \varepsilon^\rms_\rmv - \rmd \mathbf \varepsilon^\rmo)$$
+$$\mathrm{d} \mathbf \sigma^\prime = \mathbf D (\mathrm{d} \mathbf \varepsilon - \mathrm{d} \mathbf \varepsilon^\mathrm{c} - \mathrm{d} \mathbf \varepsilon^\mathrm{s}_\mathrm{v} - \mathrm{d} \mathbf \varepsilon^\mathrm{o})$$
 where
 $ \mathbf D = \mathbf D(\mathbf \sigma^\prime, \mathbf \varepsilon, \dot{\mathbf \varepsilon}) $
-is the constitutive tangent tensor, $ \rmd \mathbf \varepsilon $ is the
-total strain increment, $ \rmd \mathbf \varepsilon^\rmc $ is the creep
-strain increment, $ \rmd \mathbf \varepsilon^\rms_\rmv $ is the volumetric
-strain increment and $ \rmd \mathbf \varepsilon^\rmo $ considers all other
+is the constitutive tangent tensor, $ \mathrm{d} \mathbf \varepsilon $ is the
+total strain increment, $ \mathrm{d} \mathbf \varepsilon^\mathrm{c} $ is the creep
+strain increment, $ \mathrm{d} \mathbf \varepsilon^\mathrm{s}_\mathrm{v} $ is the volumetric
+strain increment and $ \mathrm{d} \mathbf \varepsilon^\mathrm{o} $ considers all other
 strain increments not directly associated with the effective stress. Let
 $ p $ represent the average fluid pressure from all the fluid phases in
 the porous medium. This pressure induces a hydrostatic stress
 distribution in the solid phase, thus causing a purely volumetric strain
 given in incremental form by
-$$\rmd \mathbf \varepsilon^\rms_\rmv = - \mathbf I \frac{\rmd p}{3K_\rms}
-\label{e:volumetricstrain}$$ where $ K_\rms $ is the bulk modulus of the
+$$\mathrm{d} \mathbf \varepsilon^\mathrm{s}_\mathrm{v} = - \mathbf I \frac{\mathrm{d} p}{3K_\mathrm{s}}
+\label{e:volumetricstrain}$$ where $ K_\mathrm{s} $ is the bulk modulus of the
 solid skeleton. The effective stress relation in  is usually modified by
 a corrective parameter known as Biot’s coefficient, $ \alpha $,
 [@lewis1998finite]. The modified effective stress equation (keeping the
 same notation for the modified effective stress) reads
-$$\mathbf \sigma = \mathbf \sigma^\rmprime + \alpha p \mathbf I
+$$\mathbf \sigma = \mathbf \sigma^\mathrm{p}rime + \alpha p \mathbf I
 \label{e:effstress2}$$ where $ \mathbf I $ is the identity tensor. It can be
 shown that Biot’s coefficient takes the value
-$$\alpha = 1 - \frac{K_\rmo}{K_\rms}
-\label{e:Biotscoeff}$$ where $ K_\rmo $ is the overall bulk modulus of
+$$\alpha = 1 - \frac{K_\mathrm{o}}{K_\mathrm{s}}
+\label{e:Biotscoeff}$$ where $ K_\mathrm{o} $ is the overall bulk modulus of
 the porous medium. We can now simply write
-$$\rmd \mathbf \sigma^\prime = \mathbf D (\rmd \mathbf \varepsilon - \rmd \mathbf \varepsilon^\rmc - \rmd \mathbf \varepsilon^\rmo).
+$$\mathrm{d} \mathbf \sigma^\prime = \mathbf D (\mathrm{d} \mathbf \varepsilon - \mathrm{d} \mathbf \varepsilon^\mathrm{c} - \mathrm{d} \mathbf \varepsilon^\mathrm{o}).
 \label{e:constitutive}$$ The constitutive tangent tensor takes various
 forms depending on the type of stress-strain relation employed. Some
 examples of constitutive laws include linear elasticity,
@@ -700,35 +677,35 @@ equations of state for water, the most common fluid in a porous medium,
 and solid skeleton. See [@lewis1998finite].
 
 The equation of state for water is given by
-$$\rho_\rmw = \rho_{\rmw\rmo} \exp \left[ -\alpha_\rmw T + \frac{1}{K_\rmw} (p^\rmw - p^\rmw_\rmo) \right]
-\label{e:eqofstatewater0}$$ where $ \rho_\rmw $ and $ \rho_{\rmw\rmo} $
-are the current and initial densities, $ \alpha_\rmw $ is the thermal
-expansion coefficient, $ K_\rmw $ is the bulk modulus and $ p^\rmw $ and
-$ p^\rmw_\rmo $ are the current and initial pore water pressures.
+$$\rho_\mathrm{w} = \rho_{\mathrm{w}\mathrm{o}} \exp \left[ -\alpha_\mathrm{w} T + \frac{1}{K_\mathrm{w}} (p^\mathrm{w} - p^\mathrm{w}_\mathrm{o}) \right]
+\label{e:eqofstatewater0}$$ where $ \rho_\mathrm{w} $ and $ \rho_{\mathrm{w}\mathrm{o}} $
+are the current and initial densities, $ \alpha_\mathrm{w} $ is the thermal
+expansion coefficient, $ K_\mathrm{w} $ is the bulk modulus and $ p^\mathrm{w} $ and
+$ p^\mathrm{w}_\mathrm{o} $ are the current and initial pore water pressures.
 Performing Taylor series expansion of  and retaining first order terms
 gives
-$$\rho_\rmw = \rho_{\rmw\rmo} \left[1 -\alpha_\rmw T + \frac{1}{K_\rmw} (p^\rmw - p^\rmw_\rmo) \right]$$
+$$\rho_\mathrm{w} = \rho_{\mathrm{w}\mathrm{o}} \left[1 -\alpha_\mathrm{w} T + \frac{1}{K_\mathrm{w}} (p^\mathrm{w} - p^\mathrm{w}_\mathrm{o}) \right]$$
 which can then be used to derive
-$$\frac{1}{\rho_{\rmw\rmo}} \frac{\rmD_\rmw \rho_\rmw}{\rmD t} = \frac{1}{K_\rmw} \frac{\rmD_\rmw p^\rmw}{\rmD t} - \alpha_\rmw \frac{\rmD_\rmw T}{\rmD t}.
+$$\frac{1}{\rho_{\mathrm{w}\mathrm{o}}} \frac{\mathrm{d}_\mathrm{w} \rho_\mathrm{w}}{\mathrm{d} t} = \frac{1}{K_\mathrm{w}} \frac{\mathrm{d}_\mathrm{w} p^\mathrm{w}}{\mathrm{d} t} - \alpha_\mathrm{w} \frac{\mathrm{d}_\mathrm{w} T}{\mathrm{d} t}.
 \label{e:eqofstatewater}$$ For a compressible solid phase, the material
 time derivative of the density may be derived from the mass balance of
 the solid:
 
-$$\frac{\rmD_\rms (\rho^\rms V^\rms)}{\rmD t} = 0.$$
+$$\frac{\mathrm{d}_\mathrm{s} (\rho^\mathrm{s} V^\mathrm{s})}{\mathrm{d} t} = 0.$$
 
 The solid density is a function of the average pressure on the solid
 from all other phases $ p^s $, the temperature $ T $ and the first
 invariant of the effective stress $ \text{tr}~\mathbf \sigma^\prime $. The
 variation of the solid density may then be written as
-$$\frac{1}{\rho_\rms} \frac{\rmD_\rms \rho_\rms}{\rmD t} = \frac{1}{K_\rms} \frac{\rmD_\rms p^\rms}{\rmD t} - \alpha_\rms \frac{\rmD_\rms T}{\rmD t} - \frac{1}{3(n-1)K_\rms} \frac{\rmD_\rms (\text{tr}~\mathbf \sigma^\prime)}{\rmD t}$$
-where $ \alpha_\rms $ is the thermal expansion coefficient of the solid.
+$$\frac{1}{\rho_\mathrm{s}} \frac{\mathrm{d}_\mathrm{s} \rho_\mathrm{s}}{\mathrm{d} t} = \frac{1}{K_\mathrm{s}} \frac{\mathrm{d}_\mathrm{s} p^\mathrm{s}}{\mathrm{d} t} - \alpha_\mathrm{s} \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} - \frac{1}{3(n-1)K_\mathrm{s}} \frac{\mathrm{d}_\mathrm{s} (\text{tr}~\mathbf \sigma^\prime)}{\mathrm{d} t}$$
+where $ \alpha_\mathrm{s} $ is the thermal expansion coefficient of the solid.
 The first term on the right hand side of the equation above represents
 the volumetric strain of the solid. This strain may be negligible for
 soils but significant for materials such as rock. Introducing a
 constitutive equation for the first invariant of the effective stress
 and using Biot’s coefficient from , an alternative form of the solid
 compressibility may be written as
-$$\frac{1}{\rho_\rms} \frac{\rmD_\rms \rho_\rms}{\rmD t} = \frac{1}{1-n} \left[  \frac{\alpha-n}{K_\rms} \frac{\rmD_\rms p^\rms}{\rmD t} - \alpha_\rms (\alpha-n) \frac{\rmD_\rms T}{\rmD t} - (1-\alpha) \nabla \cdot \mathbf v^\rms \right].
+$$\frac{1}{\rho_\mathrm{s}} \frac{\mathrm{d}_\mathrm{s} \rho_\mathrm{s}}{\mathrm{d} t} = \frac{1}{1-n} \left[  \frac{\alpha-n}{K_\mathrm{s}} \frac{\mathrm{d}_\mathrm{s} p^\mathrm{s}}{\mathrm{d} t} - \alpha_\mathrm{s} (\alpha-n) \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} - (1-\alpha) \nabla \cdot \mathbf v^\mathrm{s} \right].
 \label{e:compressiblesolid}$$
 
 Coupled Problems
@@ -746,15 +723,15 @@ are used to derive the governing equations for the specific processes
 under consideration. To illustrate this, we assume a fluid-saturated
 biphasic porous medium with solid (s) and fluid (f) phases. Based on the
 volume fraction concept and , the partial densities for the solid and
-fluid phases, $ \rho^\rms $ and $ \rho^\rmf $, are given by
-$$\rho^\rms = n^\rms \rho_\rms \quad \text{and} \quad
-\rho^\rmf = n^\rmf \rho_\rmf
-\label{e:partialdensities_sf}$$ where $ n^\rms $ and $ n^\rmf $ are the
-volume fractions of the solid and fluid, respectively, and $ \rho_\rms $
-and $ \rho_\rmf $ are their real densities at the microscopic level. For
-a fluid-saturated porous medium, we have $$n^\rms + n^\rmf = 1.$$ For
-simplicity in the following sections, we set $ n^\rmf = n $ and
-$ n^\rms = 1-n $. We will refer to $ n $ as the porosity of the
+fluid phases, $ \rho^\mathrm{s} $ and $ \rho^\mathrm{f} $, are given by
+$$\rho^\mathrm{s} = n^\mathrm{s} \rho_\mathrm{s} \quad \text{and} \quad
+\rho^\mathrm{f} = n^\mathrm{f} \rho_\mathrm{f}
+\label{e:partialdensities_sf}$$ where $ n^\mathrm{s} $ and $ n^\mathrm{f} $ are the
+volume fractions of the solid and fluid, respectively, and $ \rho_\mathrm{s} $
+and $ \rho_\mathrm{f} $ are their real densities at the microscopic level. For
+a fluid-saturated porous medium, we have $$n^\mathrm{s} + n^\mathrm{f} = 1.$$ For
+simplicity in the following sections, we set $ n^\mathrm{f} = n $ and
+$ n^\mathrm{s} = 1-n $. We will refer to $ n $ as the porosity of the
 material.
 
 ### Hydraulic Processes ($ p $ or $ p\text{-}v $ Formulation)
@@ -762,33 +739,33 @@ material.
 Hydraulic processes in a porous medium are mainly described by the law
 of conservation of mass. The mass balance equation for the fluid phase
 according to  is
-$$\frac{\rmD_\rmf \rho^\rmf}{\rmD t} + \rho^\rmf \nabla \cdot \mathbf v^\rmf = 0$$
+$$\frac{\mathrm{d}_\mathrm{f} \rho^\mathrm{f}}{\mathrm{d} t} + \rho^\mathrm{f} \nabla \cdot \mathbf v^\mathrm{f} = 0$$
 in which we have ignored any mass exchange between the solid and fluid
 phases. Considering the flow of the fluid with respect to the solid
-phase, we write the material time derivative of $ \rho^\rmf $ according
+phase, we write the material time derivative of $ \rho^\mathrm{f} $ according
 to  as
-$$\frac{\rmD_\rms \rho^\rmf}{\rmD t} - \nabla \rho^\rmf \cdot \mathbf v^{\rms \rmf} + \rho^\rmf \nabla \cdot \mathbf v^\rmf = 0$$
+$$\frac{\mathrm{d}_\mathrm{s} \rho^\mathrm{f}}{\mathrm{d} t} - \nabla \rho^\mathrm{f} \cdot \mathbf v^{\mathrm{s} \mathrm{f}} + \rho^\mathrm{f} \nabla \cdot \mathbf v^\mathrm{f} = 0$$
 which, according to , becomes
-$$\frac{\partial \rho^\rmf}{\partial t} + \nabla \rho^\rmf \cdot \mathbf v^\rmf + \rho^\rmf \nabla \cdot \mathbf v^\rmf = 0.
+$$\frac{\partial \rho^\mathrm{f}}{\partial t} + \nabla \rho^\mathrm{f} \cdot \mathbf v^\mathrm{f} + \rho^\mathrm{f} \nabla \cdot \mathbf v^\mathrm{f} = 0.
 \label{e:masbalfluid1}$$ wherein we have used
-$ \mathbf v^{\rms \rmf} = \mathbf v^\rms - \mathbf v^\rmf $. From $ _2 $, we have
-$$\frac{\partial \rho^\rmf}{\partial t} = \frac{\partial (n\rho_\rmf)}{\partial t} = \frac{\partial n}{\partial t} \rho_\rmf + n\frac{\partial \rho_\rmf}{\partial t}.
+$ \mathbf v^{\mathrm{s} \mathrm{f}} = \mathbf v^\mathrm{s} - \mathbf v^\mathrm{f} $. From $ _2 $, we have
+$$\frac{\partial \rho^\mathrm{f}}{\partial t} = \frac{\partial (n\rho_\mathrm{f})}{\partial t} = \frac{\partial n}{\partial t} \rho_\mathrm{f} + n\frac{\partial \rho_\mathrm{f}}{\partial t}.
 \label{e:fluiddensitydt}$$ The porosity remains constant if there are no
 mechanical deformations i.e. $ \frac{\partial n}{\partial t} = 0 $. With
 this, and neglecting any spatial variations in the fluid density (i.e.
-$ \nabla \rho^\rmf = 0 $),  reduces to
-$$\frac{\partial \rho_\rmf}{\partial t} + \rho_\rmf \nabla \cdot \mathbf v^\rmf = 0.
+$ \nabla \rho^\mathrm{f} = 0 $),  reduces to
+$$\frac{\partial \rho_\mathrm{f}}{\partial t} + \rho_\mathrm{f} \nabla \cdot \mathbf v^\mathrm{f} = 0.
 \label{e:masbalfluid2}$$ If the fluid is assumed to be incompressible, 
-further reduces to $$\nabla \cdot \mathbf v^\rmf = 0.$$ The fluid velocity
+further reduces to $$\nabla \cdot \mathbf v^\mathrm{f} = 0.$$ The fluid velocity
 according to Darcy’s law in this case is
-$ \mathbf w = n (\mathbf v^\rmf - \mathbf v^\rms) = n \mathbf v^\rmf $, with no
-mechanical deformations ($ \mathbf v^\rms = \mathbf 0 $). Using  and , the fluid
+$ \mathbf w = n (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) = n \mathbf v^\mathrm{f} $, with no
+mechanical deformations ($ \mathbf v^\mathrm{s} = \mathbf 0 $). Using  and , the fluid
 mass balance equation for a constant hydraulic conductivity
-($ k_\rmr=1 $) can be written as
-$$\nabla \cdot \left[ -\frac{1}{\gamma_\rmf} \mathbf k  \cdot (\nabla p^\rmf - \rho_\rmf \mathbf b) \right]  = 0
-\label{e:masbalfluidsteady}$$ where $ \gamma_\rmf $ is the unit weight
+($ k_\mathrm{r}=1 $) can be written as
+$$\nabla \cdot \left[ -\frac{1}{\gamma_\mathrm{f}} \mathbf k  \cdot (\nabla p^\mathrm{f} - \rho_\mathrm{f} \mathbf b) \right]  = 0
+\label{e:masbalfluidsteady}$$ where $ \gamma_\mathrm{f} $ is the unit weight
 of the fluid. The only flow driving forces considered here are the fluid
-pressure $ p^\rmf $ and the body forces $ \mathbf b $. The equation above
+pressure $ p^\mathrm{f} $ and the body forces $ \mathbf b $. The equation above
 governs the steady-state flow of fluid in a porous medium and may be
 solved for the pressure as the unknown, resulting in the so called
 $ p $-formulation.
@@ -796,18 +773,18 @@ $ p $-formulation.
 For a compressible fluid, the temporal variation of the fluid density
 needs to be taken into account. For instance, if our fluid is water,
 from the equation of state for water in  we may write
-$$\frac{\partial \rho_\rmf}{\partial t} = \frac{\rho_\rmf}{K_\rmf} \frac{\partial p^\rmf}{\partial t}
-\label{e:compressiblefluid}$$ where $ K_\rmf $ is the bulk modulus of
+$$\frac{\partial \rho_\mathrm{f}}{\partial t} = \frac{\rho_\mathrm{f}}{K_\mathrm{f}} \frac{\partial p^\mathrm{f}}{\partial t}
+\label{e:compressiblefluid}$$ where $ K_\mathrm{f} $ is the bulk modulus of
 the fluid and isothermal conditions are assumed. Using  in , we get
-$$\frac{n}{K_\rmf} \frac{\partial p^\rmf}{\partial t} + \nabla \cdot \mathbf w = 0
+$$\frac{n}{K_\mathrm{f}} \frac{\partial p^\mathrm{f}}{\partial t} + \nabla \cdot \mathbf w = 0
 \label{e:masblafluidcompressible}$$ wherein we have used
-$ \mathbf w = n \mathbf v^\rmf $. Sometimes, the above equation is solved
-together with Darcy’s law for the pressure $ p^\rmf $ and Darcy’s
+$ \mathbf w = n \mathbf v^\mathrm{f} $. Sometimes, the above equation is solved
+together with Darcy’s law for the pressure $ p^\mathrm{f} $ and Darcy’s
 velocity $ \mathbf w $ as the unknowns. The equations to be solved
 simultaneously in this case are $$\begin{aligned}
 \begin{split}
-\frac{n}{K_\rmf} \frac{\partial p^\rmf}{\partial t} + \nabla \cdot \mathbf w &= 0 \\
-\mathbf w + \frac{1}{\gamma_\rmf} \mathbf k  \cdot (\nabla p^\rmf - \rho_\rmf \mathbf b) &= 0
+\frac{n}{K_\mathrm{f}} \frac{\partial p^\mathrm{f}}{\partial t} + \nabla \cdot \mathbf w &= 0 \\
+\mathbf w + \frac{1}{\gamma_\mathrm{f}} \mathbf k  \cdot (\nabla p^\mathrm{f} - \rho_\mathrm{f} \mathbf b) &= 0
 \end{split}\end{aligned}$$ which results in the so called $ p\text{-}v $
 formulation.
 
@@ -820,43 +797,43 @@ balance equations of the solid and fluid phases.
 
 From  and , with no spatial variations in fluid density, the mass
 balance equation for the fluid phase is given by
-$$\rho_\rmf\frac{\partial n}{\partial t} + n\frac{\partial \rho_\rmf}{\partial t} + n\rho_\rmf \nabla \cdot \mathbf v^\rmf = 0.
+$$\rho_\mathrm{f}\frac{\partial n}{\partial t} + n\frac{\partial \rho_\mathrm{f}}{\partial t} + n\rho_\mathrm{f} \nabla \cdot \mathbf v^\mathrm{f} = 0.
 \label{e:masbalfluidHM}$$ The mass balance equation for the solid phase,
 based on , is given by
-$$\frac{\rmD_\rms \rho^\rms}{\rmD t} + \rho^\rms \nabla \cdot \mathbf v^\rms = 0.$$
-From $ _1 $ we have $ \rho^\rms = (1-n) \rho_\rms $. Using this in the
+$$\frac{\mathrm{d}_\mathrm{s} \rho^\mathrm{s}}{\mathrm{d} t} + \rho^\mathrm{s} \nabla \cdot \mathbf v^\mathrm{s} = 0.$$
+From $ _1 $ we have $ \rho^\mathrm{s} = (1-n) \rho_\mathrm{s} $. Using this in the
 above equation, and neglecting spatial variations in the porosity and
 the solid density, gives
-$$-\rho_\rms \frac{\partial n}{\partial t} + (1-n) \frac{\partial \rho_\rms}{\partial t} + (1-n) \rho_\rms \nabla \cdot \mathbf v^\rms = 0.
-\label{e:masbalsolidHM}$$ Dividing  by $ \rho_\rmf $ and  by
-$ \rho_\rms $ and adding the two equations gives the overall mass
+$$-\rho_\mathrm{s} \frac{\partial n}{\partial t} + (1-n) \frac{\partial \rho_\mathrm{s}}{\partial t} + (1-n) \rho_\mathrm{s} \nabla \cdot \mathbf v^\mathrm{s} = 0.
+\label{e:masbalsolidHM}$$ Dividing  by $ \rho_\mathrm{f} $ and  by
+$ \rho_\mathrm{s} $ and adding the two equations gives the overall mass
 balance equation for the fluid-saturated porous medium as
-$$\frac{(1-n)}{\rho_\rms} \frac{\partial \rho_\rms}{\partial t} + (1-n) \nabla \cdot \mathbf v^\rms + \frac{n}{\rho_\rmf} \frac{\partial \rho_\rmf}{\partial t} + n \nabla \cdot \mathbf v^\rmf = 0.
+$$\frac{(1-n)}{\rho_\mathrm{s}} \frac{\partial \rho_\mathrm{s}}{\partial t} + (1-n) \nabla \cdot \mathbf v^\mathrm{s} + \frac{n}{\rho_\mathrm{f}} \frac{\partial \rho_\mathrm{f}}{\partial t} + n \nabla \cdot \mathbf v^\mathrm{f} = 0.
 \label{e:masbalHM1}$$ Rearranging the above equation gives
-$$\nabla \cdot \mathbf v^\rms + \frac{(1-n)}{\rho_\rms} \frac{\partial \rho_\rms}{\partial t} +  \frac{n}{\rho_\rmf} \frac{\partial \rho_\rmf}{\partial t} + \nabla \cdot \mathbf w = 0
-\label{e:masbalHM2}$$ where $ \mathbf w = n (\mathbf v^\rmf - \mathbf v^\rms) $ is
+$$\nabla \cdot \mathbf v^\mathrm{s} + \frac{(1-n)}{\rho_\mathrm{s}} \frac{\partial \rho_\mathrm{s}}{\partial t} +  \frac{n}{\rho_\mathrm{f}} \frac{\partial \rho_\mathrm{f}}{\partial t} + \nabla \cdot \mathbf w = 0
+\label{e:masbalHM2}$$ where $ \mathbf w = n (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) $ is
 Darcy’s velocity. Assuming isothermal conditions and water as the fluid,
 the compressibility of the fluid is given by  and from  we get for the
 solid phase
-$$\frac{1-n}{\rho_\rms} \frac{\partial \rho_\rms}{\partial t} = \frac{\alpha-n}{K_\rms} \frac{\partial p^\rmf}{\partial t} - (1-\alpha) \nabla \cdot \mathbf v^\rms
+$$\frac{1-n}{\rho_\mathrm{s}} \frac{\partial \rho_\mathrm{s}}{\partial t} = \frac{\alpha-n}{K_\mathrm{s}} \frac{\partial p^\mathrm{f}}{\partial t} - (1-\alpha) \nabla \cdot \mathbf v^\mathrm{s}
 \label{e:compressiblesolidHM}$$ where for a single fluid phase we have
-set $ p^\rms = p^\rmf $. Equation , based on  and , can be rewritten as
-$$\alpha \nabla \cdot \mathbf v^\rms + \left( \frac{\alpha-n}{K_\rms} + \frac{n}{K_\rmf} \right)  \frac{\partial p^\rmf}{\partial t} + \nabla \cdot \mathbf w = 0.
+set $ p^\mathrm{s} = p^\mathrm{f} $. Equation , based on  and , can be rewritten as
+$$\alpha \nabla \cdot \mathbf v^\mathrm{s} + \left( \frac{\alpha-n}{K_\mathrm{s}} + \frac{n}{K_\mathrm{f}} \right)  \frac{\partial p^\mathrm{f}}{\partial t} + \nabla \cdot \mathbf w = 0.
 \label{e:masbalHM}$$ For incompressible solid and fluid phases
-($ 1/K_\rms = 1/K_\rmf = 0 $ and $ \alpha=1 $), the mass balance
-equation reduces to $$\nabla \cdot \mathbf v^\rms + \nabla \cdot \mathbf w = 0.
+($ 1/K_\mathrm{s} = 1/K_\mathrm{f} = 0 $ and $ \alpha=1 $), the mass balance
+equation reduces to $$\nabla \cdot \mathbf v^\mathrm{s} + \nabla \cdot \mathbf w = 0.
 \label{e:masbalHMincomp}$$ The linear momentum balance equations for the
 solid and fluid phases, according to , assuming a static condition and
 no momentum exchange between the phases, are given by $$\begin{aligned}
 \begin{split}
-\nabla \cdot \mathbf \sigma^\rms + \rho^\rms \mathbf b^\rms  &= \mathbf 0 \\
-\nabla \cdot \mathbf \sigma^\rmf + \rho^\rmf \mathbf b^\rmf  &= \mathbf 0.
+\nabla \cdot \mathbf \sigma^\mathrm{s} + \rho^\mathrm{s} \mathbf b^\mathrm{s}  &= \mathbf 0 \\
+\nabla \cdot \mathbf \sigma^\mathrm{f} + \rho^\mathrm{f} \mathbf b^\mathrm{f}  &= \mathbf 0.
 \end{split}\end{aligned}$$ Summation of the two equations above and use
 of $ _2 $,  and , gives the momentum balance equation for the whole
 medium as
-$$\nabla \cdot (\mathbf \sigma^\prime + \alpha p^\rmf \mathbf I) + \rho \mathbf b = \mathbf 0
+$$\nabla \cdot (\mathbf \sigma^\prime + \alpha p^\mathrm{f} \mathbf I) + \rho \mathbf b = \mathbf 0
 \label{e:mombalHM}$$ wherein the total density of the porous medium is
-$$\rho = \rho^\rms + \rho^\rmf = (1-n)\rho_\rms + n \rho_\rmf.$$ For
+$$\rho = \rho^\mathrm{s} + \rho^\mathrm{f} = (1-n)\rho_\mathrm{s} + n \rho_\mathrm{f}.$$ For
 coupled hydro-mechanical (HM) processes in a porous medium, the mass
 balance equation in  and the linear momentum balance equation in  can be
 solved simultaneously for the displacement and pressure field variables.
@@ -879,26 +856,26 @@ balance equation is derived from  by considering non-isothermal
 conditions for the compressibilities of the solid and fluid phases.
 Based on  and , we get $$\begin{aligned}
 \begin{split}
-\frac{1-n}{\rho_\rms} \frac{\partial \rho_\rms}{\partial t} &= \frac{\alpha-n}{K_\rms} \frac{\partial p^\rmf}{\partial t} - (\alpha-n)\alpha_\rms \frac{\partial T}{\partial t} - (1-\alpha) \nabla \cdot \mathbf v^\rms \\
-\frac{n}{\rho_\rmf }\frac{\partial \rho_\rmf}{\partial t} &= \frac{n}{K_\rmf} \frac{\partial p^\rmf}{\partial t} - n\alpha_\rmw \frac{\partial T}{\partial t}.
+\frac{1-n}{\rho_\mathrm{s}} \frac{\partial \rho_\mathrm{s}}{\partial t} &= \frac{\alpha-n}{K_\mathrm{s}} \frac{\partial p^\mathrm{f}}{\partial t} - (\alpha-n)\alpha_\mathrm{s} \frac{\partial T}{\partial t} - (1-\alpha) \nabla \cdot \mathbf v^\mathrm{s} \\
+\frac{n}{\rho_\mathrm{f} }\frac{\partial \rho_\mathrm{f}}{\partial t} &= \frac{n}{K_\mathrm{f}} \frac{\partial p^\mathrm{f}}{\partial t} - n\alpha_\mathrm{w} \frac{\partial T}{\partial t}.
 \end{split}
 \label{e:compressibleTHM}\end{aligned}$$ Using  in  and simplifying
 gives the overall mass balance equation for a fluid-saturated porous
 medium subjected to THM coupled processes as
-$$\alpha \nabla \cdot \mathbf v^\rms + \left( \frac{\alpha-n}{K_\rms} + \frac{n}{K_\rmf} \right) \frac{\partial p^\rmf}{\partial t} - \alpha_\rmo \frac{\partial T}{\partial t} + \nabla \cdot \mathbf w = 0
+$$\alpha \nabla \cdot \mathbf v^\mathrm{s} + \left( \frac{\alpha-n}{K_\mathrm{s}} + \frac{n}{K_\mathrm{f}} \right) \frac{\partial p^\mathrm{f}}{\partial t} - \alpha_\mathrm{o} \frac{\partial T}{\partial t} + \nabla \cdot \mathbf w = 0
 \label{e:masbalTHM}$$ where
-$ \alpha_\rmo = n\alpha_\rmw + (\alpha-n)\alpha_\rms $ is the overall
+$ \alpha_\mathrm{o} = n\alpha_\mathrm{w} + (\alpha-n)\alpha_\mathrm{s} $ is the overall
 thermal expansion coefficient of the porous medium.
 
 The energy balance equation for a single phase, neglecting any mass,
 momentum and energy exchanges between the solid and fluid phases, is
 obtained from  as
-$$\rho^\alpha \frac{\rmD_\alpha e^\alpha}{\rmD t} - \mathbf \sigma^\alpha : \mathbf L^\alpha + \nabla \cdot \mathbf q^\alpha = Q^\alpha$$
+$$\rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \mathbf \sigma^\alpha : \mathbf L^\alpha + \nabla \cdot \mathbf q^\alpha = Q^\alpha$$
 The individual energy balance equations for the solid and fluid phases
 are then written as $$\begin{aligned}
 \begin{split}
-\rho^\rms \frac{\rmD_\rms e^\rms}{\rmD t} - \mathbf \sigma^\rms : \mathbf L^\rms + \nabla \cdot \mathbf q^\rms = Q^\rms \\
-\rho^\rmf \frac{\rmD_\rmf e^\rmf}{\rmD t} - \mathbf \sigma^\rmf : \mathbf L^\rmf + \nabla \cdot \mathbf q^\rmf = Q^\rmf.
+\rho^\mathrm{s} \frac{\mathrm{d}_\mathrm{s} e^\mathrm{s}}{\mathrm{d} t} - \mathbf \sigma^\mathrm{s} : \mathbf L^\mathrm{s} + \nabla \cdot \mathbf q^\mathrm{s} = Q^\mathrm{s} \\
+\rho^\mathrm{f} \frac{\mathrm{d}_\mathrm{f} e^\mathrm{f}}{\mathrm{d} t} - \mathbf \sigma^\mathrm{f} : \mathbf L^\mathrm{f} + \nabla \cdot \mathbf q^\mathrm{f} = Q^\mathrm{f}.
 \end{split}\end{aligned}$$ Viscous dissipation may be significant in
 applications where the material flows at high rates e.g. due to
 injection or molding in polymer processing. For the applications of
@@ -906,44 +883,44 @@ interest in this thesis, it may be neglected. With this assumption and
 taking all material time derivatives with respect to the solid phase,
 using , the individual balance equations become $$\begin{aligned}
 \begin{split}
-\rho^\rms \frac{\rmD_\rms e^\rms}{\rmD t} + \nabla \cdot \mathbf q^\rms = Q^\rms \\
-\rho^\rmf \frac{\rmD_\rms e^\rmf}{\rmD t} + \rho^\rmf \nabla e^\rmf \cdot (\mathbf v^\rmf - \mathbf v^\rms) + \nabla \cdot \mathbf q^\rmf = Q^\rmf
+\rho^\mathrm{s} \frac{\mathrm{d}_\mathrm{s} e^\mathrm{s}}{\mathrm{d} t} + \nabla \cdot \mathbf q^\mathrm{s} = Q^\mathrm{s} \\
+\rho^\mathrm{f} \frac{\mathrm{d}_\mathrm{s} e^\mathrm{f}}{\mathrm{d} t} + \rho^\mathrm{f} \nabla e^\mathrm{f} \cdot (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) + \nabla \cdot \mathbf q^\mathrm{f} = Q^\mathrm{f}
 \end{split}
 \label{e:enebalTHM0}\end{aligned}$$ The specific internal energies for
 the solid and fluid phases as a function of temperature are given by
-$$e^\rms = c_\rms T \quad \text{and} \quad e^\rmf = c_\rmf T$$ where
-$ c_\rms $ and $ c_\rmf $ are their respective specific heat capacities.
+$$e^\mathrm{s} = c_\mathrm{s} T \quad \text{and} \quad e^\mathrm{f} = c_\mathrm{f} T$$ where
+$ c_\mathrm{s} $ and $ c_\mathrm{f} $ are their respective specific heat capacities.
 Applying these to  gives $$\begin{aligned}
 \begin{split}
-\rho^\rms c_\rms \frac{\rmD_\rms T}{\rmD t} + \nabla \cdot \mathbf q^\rms = Q^\rms \\
-\rho^\rmf c_\rmf \frac{\rmD_\rms T}{\rmD t} + \rho^\rmf c_\rmf \nabla T \cdot (\mathbf v^\rmf - \mathbf v^\rms) + \nabla \cdot \mathbf q^\rmf = Q^\rmf.
+\rho^\mathrm{s} c_\mathrm{s} \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} + \nabla \cdot \mathbf q^\mathrm{s} = Q^\mathrm{s} \\
+\rho^\mathrm{f} c_\mathrm{f} \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} + \rho^\mathrm{f} c_\mathrm{f} \nabla T \cdot (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) + \nabla \cdot \mathbf q^\mathrm{f} = Q^\mathrm{f}.
 \end{split}
 \label{e:enebalTHM1}\end{aligned}$$ Summation of the individual balance
 equations gives the overall energy balance equation for the porous
 medium as
-$$(\rho^\rms c_\rms + \rho^\rmf c_\rmf) \frac{\rmD_\rms T}{\rmD t} + \rho^\rmf c_\rmf \nabla T \cdot (\mathbf v^\rmf - \mathbf v^\rms) + \nabla \cdot \mathbf q = Q
+$$(\rho^\mathrm{s} c_\mathrm{s} + \rho^\mathrm{f} c_\mathrm{f}) \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} + \rho^\mathrm{f} c_\mathrm{f} \nabla T \cdot (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) + \nabla \cdot \mathbf q = Q
 \label{e:enebalTHM2}$$ wherein we have implied $$\begin{aligned}
 \begin{split}
-\mathbf q &= \mathbf q^\rms + \mathbf q^\rmf \\
-Q &= Q^\rms + Q^\rmf
+\mathbf q &= \mathbf q^\mathrm{s} + \mathbf q^\mathrm{f} \\
+Q &= Q^\mathrm{s} + Q^\mathrm{f}
 \end{split}\end{aligned}$$ for the total heat flux and heat supply,
 respectively.
 
 Defining the effective heat capacity of the medium as
-$$(\rho c)_\rmef = \rho^\rms c_\rms + \rho^\rmf c_\rmf = (1-n)\rho_\rms c_\rms + n \rho_\rmf c_\rmf$$
-and noting that $ \mathbf w = n (\mathbf v^\rmf - \mathbf v^\rms) $ is Darcy’s
+$$(\rho c)_\mathrm{e}f = \rho^\mathrm{s} c_\mathrm{s} + \rho^\mathrm{f} c_\mathrm{f} = (1-n)\rho_\mathrm{s} c_\mathrm{s} + n \rho_\mathrm{f} c_\mathrm{f}$$
+and noting that $ \mathbf w = n (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) $ is Darcy’s
 velocity,  is further simplified to obtain the energy balance equation
 for the medium as
-$$(\rho c)_\rmef \frac{\rmD_\rms T}{\rmD t} + \rho_\rmf c_\rmf  \mathbf w \cdot \nabla T + \nabla \cdot \mathbf q = Q.
+$$(\rho c)_\mathrm{e}f \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} + \rho_\mathrm{f} c_\mathrm{f}  \mathbf w \cdot \nabla T + \nabla \cdot \mathbf q = Q.
 \label{e:enebalTHM3}$$ The material time derivative of the temperature
 with respect to the solid phase is given by
-$$\frac{\rmD_\rms T}{\rmD t} = \frac{\partial T}{\partial t} + \nabla T \cdot \mathbf v^\rms.$$
+$$\frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} = \frac{\partial T}{\partial t} + \nabla T \cdot \mathbf v^\mathrm{s}.$$
 For the applications of interest in this thesis, the convective heat
 flux in the solid phase is usually negligible i.e.
-$ \nabla T \cdot \mathbf v^\rms \approx $ 0. With this assumption and using
+$ \nabla T \cdot \mathbf v^\mathrm{s} \approx $ 0. With this assumption and using
 Fourier’s law, , in , the energy balance equation for the medium becomes
 
-$$(\rho c)_\rmef \frac{\partial T}{\partial t} + \rho_\rmf c_\rmf  \mathbf w \cdot \nabla T - \nabla \cdot (\mathbf \lambda \nabla T) = Q.
+$$(\rho c)_\mathrm{e}f \frac{\partial T}{\partial t} + \rho_\mathrm{f} c_\mathrm{f}  \mathbf w \cdot \nabla T - \nabla \cdot (\mathbf \lambda \nabla T) = Q.
 \label{e:enebalTHM}$$
 
 For THM coupled processes in a porous medium, the linear momentum, mass
