@@ -6,10 +6,7 @@ bibliography: pmt.bib
 
 #### Author: [Yared W. Bekele](https://yaredwb.com/)
 
-1. [Abstract]
-2. [Background]
-3. [Volume Fraction Concept]
-4. [Kinematics]
+{:toc}
 
 ### Abstract
 
