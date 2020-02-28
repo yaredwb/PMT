@@ -5,11 +5,14 @@ bibliography: pmt.bib
 ---
 
 #### Author: [Yared W. Bekele](https://yaredwb.com/)
+{:.no_toc}
 
+**Contents**
 * TOC
 {:toc}
 
 ### Abstract
+{:.no_toc}
 
 The fundamental concepts and formulations in porous media
 theory are presented. The discussion starts with a brief history of
