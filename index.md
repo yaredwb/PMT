@@ -24,7 +24,7 @@ thesis are soils and specific conservation equations are derived for
 hydraulic, hydro-mechanical and thermo-hydro-mechanical processes by
 making the necessary assumptions for particular application needs.
 
-# Background (#background)
+# Background
 
 The study of porous materials is essential in various disciplines of science and engineering such as soil mechanics, oil and reservoir engineering, biomechanics, material sciences and chemical engineering. The porous materials studied under porous media theory can either occur naturally, such as soils and rocks, or may be artificial, such as sponges and synthetic polymers. The physical and mechanical properties of such materials have been studied experimentally and mathematically over several decades by a number of researchers. Modern porous media theory, which will be discussed in detail in later sections, developed over a long period of time to reach to what is known today. The historical development of the theory is documented in some publications such as [@de1988historical] and [@de2003reflections].
 
@@ -33,7 +33,7 @@ immiscible and structured mixtures by [@bedford1983theories] and a generalized a
 
 In the following sections, the basic components of porous media theory are presented. The volume faction concept, a fundamental concept in porous media theory, is first discussed. The conservation laws of mass, momentum and energy are then presented in a general form for a porous medium with any number of constituents. The mechanics of phase change in a porous medium and how it affects the conservation laws is then treated. Constitutive equations that govern the constituents of the porous medium are required to complete the theory and these are discussed afterwards. These sections are presented in a brief way here and a detailed presentation of the topics may be referred from modern treatments of porous media theory such as in [@coussy2004poromechanics], [@vadasz2008emerging] and [@ehlers2013porous].
 
-# Volume Fraction Concept (#volume)
+# Volume Fraction Concept
 
 One of the most important concepts in the development of porous media theory is the volume fraction concept. This concept is used to a idealize a porous medium with multiple constituents as a homogeneous continuum. An important assumption in the volume fraction concept is that the solid constituent of the porous medium is considered as a reference volume such that only the fluid constituents can enter or leave the reference volume; see [@bluhm1997volume].
 
@@ -76,7 +76,7 @@ $$
 \rho(\mathbf x,t) = \sum\limits_{\alpha=1}^{N} \rho^\alpha(\mathbf x,t).
 $$
 
-# Kinematics (#kinematics)
+# Kinematics
 
 Kinematic relations describing the relative motions of the phases in a porous medium are briefly discussed here. These relations will be used later in deriving the conservation laws for a porous medium. A detailed presentation may be referred from [@lewis1998finite].
 
@@ -178,13 +178,13 @@ $$
 \mathbf D^\alpha = \frac{1}{2} (\mathbf L^\alpha + {\mathbf L^\alpha}^\intercal) \quad \text{and} \quad \mathbf W^\alpha = \frac{1}{2} (\mathbf L^\alpha - {\mathbf L^\alpha}^\intercal).
 $$
 
-# Conservation Laws (#conservation-laws)
+# Conservation Laws
 
 The various physical processes within a porous medium induced by external and internal factors are described mathematically using  onservation laws, which describe the evolution of physical parameters relevant to the processes. The main conservation laws for a porous medium are mass, momentum and energy balance equations.
 
 The kinematic equations described in the previous section are used to derive the balance equations for a given porous medium. The derivation of these balance equations considers internal and external factors affecting the state of the porous medium and the interactions between the phases in the medium. This is required to ensure that the individual balance equations of the phases result in the balance equation of the whole mixture when superimposed; see [@hassanizadeh1980general]. In the following sections, the balance equations of mass, momentum and energy are derived for an individual phase in a porous medium and for the mixture as a whole. The presentation follows the works of [@de2006trends] and [@lewis1998finite].
 
-## Mass Balance (#mass-balance)
+## Mass Balance
 
 The law of conservation of mass for phase $$ \alpha $$ requires that the rate of change of mass be equal to any other mass of that phase being added to or leaving from the system, internally from other constituents or externally from other sources. The rate of change of mass $$ M^\alpha $$ of phase $$ \alpha $$ over a domain $$ V $$ is described by
 
@@ -226,7 +226,7 @@ $$
 
 In , the motion of a particle of phase $$ \alpha $$ is expressed relative to the same phase. In practice, it is more convenient to take one of the phases (usually the solid phase) as a reference to describe the motion of all other phases. The individual mass balance equations for these phases can then be modified by introducing their relative velocity with respect to the reference phase.
 
-## Linear Momentum Balance {#linear-momentum-balance}
+## Linear Momentum Balance
 
 The balance of linear momentum for a given phase $$ \alpha $$ requires that the material time derivative its momentum $$ \mathbf P^\alpha $$ be in equilibrium with the sum of all internal interaction forces and external forces. The rate of change of momentum over a domain $$ V $$ is described by
 
@@ -293,7 +293,7 @@ $$
 \nabla \cdot \mathbf \sigma + \rho \mathbf b = \mathbf 0.
 $$
 
-## Angular Momentum Balance (#angular-momentum-balance)
+## Angular Momentum Balance
 
 The balance of angular momentum or moment of momentum states that the material time derivative of the angular momentum is equal to the moments of all external forces where the moments are referred to a certain fixed point. The angular momentum $$ \mathbf H^\alpha $$ of phase $$ \alpha $$ is given by
 
@@ -340,7 +340,7 @@ $$
 
 Thus, the conservation of angular momentum proves that Cauchy’s stress tensor is symmetric. Note that if the angular momentum exchange between the phases is assumed to be non-zero, the stress tensor would not be symmetric, requiring the introduction of additional rotational degrees of freedom.
 
-## Energy Balance (#energy-balance)
+## Energy Balance
 
 The law of conservation of energy, the first law of thermodynamics, requires that the rate of change of the internal and kinetic energies be balanced by the rate of mechanical work and heat. For phase $$ \alpha $$ in a porous medium, this is written mathematically as
 
@@ -411,11 +411,11 @@ $$
 \sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) - \mathbf \sigma^\alpha : \mathbf L^\alpha \right] + \nabla \cdot \mathbf q  = Q.
 $$
 
-# Thermodynamics and Phase Change (#thermodynamics)
+# Thermodynamics and Phase Change
 
 The second law of thermodynamics (entropy inequality) is used to state the restrictions on constitutive equations. It follows from the conservation of energy (first law of thermodynamics) with the introduction of the absolute temperature.
 
-## Entropy Inequality (#entropy-inequality)
+## Entropy Inequality
 
 The assumption of entropy inequality for each phase $$ \alpha $$ is a sufficient but restrictive condition. For the existence of dissipation mechanisms within the porous medium, an entropy inequality for all the constituents is both a necessary and sufficient condition, [@de2006trends].
 
@@ -447,7 +447,7 @@ $$
 together with the energy balance in . The inequality in  considers a general case where the constituents have a different absolute temperature $$ T^\alpha $$. It may be simplified for the case when all the constituents have the same
 absolute temperature $$ T = T^\alpha $$.
 
-## Phase Transitions (#phase-transitions)
+## Phase Transitions
 
 The physical processes in a porous medium sometimes involve the transition of one phase into another such as phase change from liquid to vapor, liquid to solid or solid to liquid. These types of phase changes are referred to as first-order transitions, see [@de1999phase], whereas other transitions such as from a super fluid to ordinary fluid (e.g. helium) are called second-order transitions. The discussion here focuses on first-order transitions. We take a closer look here at the effect of phase transitions in a porous medium.
 
@@ -503,11 +503,11 @@ $$
 \label{e:clausius2}
 $$
 
-# Conduction Laws (#conduction-laws)
+# Conduction Laws
 
 The equations governing the flow of fluid and heat in a porous medium are given by Darcy’s law and Fourier’s law, respectively. We refer to these laws here as conduction laws, as used in [@coussy2004poromechanics].
 
-## Darcy’s Law (#darcys-law)
+## Darcy’s Law
 
 The specific discharge of fluid in a porous medium was shown to be proportional to the head loss based on experiments by Henry Darcy in 1857, [@verruijt2013theory]. Darcy’s law may be derived for fully saturated porous media from the fluid momentum balance equation, see for instance [@whitaker1986flow].
 
@@ -546,7 +546,7 @@ $$
 
 wherein we have kept the same relative coefficient $$ k_\mathrm{r} $$ for hydraulic conductivity that varies with the porosity and degree of fluid saturation of the porous medium.
 
-## Fourier’s Law (#fouriers-law)
+## Fourier’s Law
 
 Thermal conduction in a porous medium is expressed using Fourier’s law which states that the rate of heat flow is proportional to the negative gradient of the temperature. Fourier’s law for the heat flux $$ \mathbf q $$ is given by 
 
@@ -562,11 +562,11 @@ $$
 
 where $$ \lambda $$ is the effective thermal conductivity coefficient which is a function of the individual thermal conductivities of the constituents of the porous medium and their volume fractions. Fourier’s law has a similar form both at the microscopic and macroscopic levels, [@coussy2004poromechanics].
 
-# Constitutive Laws (#constitutive-laws)
+# Constitutive Laws
 
 The balance equations presented in Section \[sec:conservationlaws\] are valid for any porous medium. To complete these balance equations for a specific material, a constitutive model needs to be introduced, [@de2011computational]. We first introduce the effective stress concept before discussing the constitutive equations required to complete the description.
 
-## The Effective Stress Concept (#effective-stress)
+## The Effective Stress Concept
 
 The effective stress concept is widely used in porous media applications, especially in soil mechanics. The historical development of this concept is documented in [@de1990development]. The concept was already conceived and studied by scientists by the end of the 19th century. A significant development with a mathematical background came later in early 20th century from the significant contributions of Paul Fillunger and especially Karl von Terzaghi; see [@skempton1960terzaghi].
 
@@ -597,7 +597,7 @@ $$
 \label{e:effstress}
 $$
 
-## Stress-Strain Relations (#stress-strain)
+## Stress-Strain Relations
 
 A constitutive equation for the solid phase relates the effective stress and the strain. The constitutive stress-strain relation in a general form may be expressed as
 
@@ -657,7 +657,7 @@ $$
 
 with $$ \boldsymbol{\mathit{1}} $$ being a matrix of ones, $$ E $$ is the Young’s modulus of the soil and $$ \nu $$ is the Poisson’s ratio. For thermoelastic material models, these parameters are usually defined as a function of temperature and/or other temperature dependent parameters.
 
-## Compressibility of Phases (#compressibility)
+## Compressibility of Phases
 
 For compressible phases in a porous medium, the density of a phase may be a function of pressure, temperature and other factors. We look at the equations of state for water, the most common fluid in a porous medium, and solid skeleton. See [@lewis1998finite].
 
@@ -701,7 +701,7 @@ $$
 \label{e:compressiblesolid}
 $$
 
-# Coupled Problems (#coupled-problems)
+# Coupled Problems
 
 Different types of physical processes may occur in a porous medium depending on the type of the material and its application. Typical examples include hydraulic, mechanical, thermal and chemical processes. Two or more physical processes often occur in a porous medium leading to
 what we refer to as coupled processes. We focus on hydraulic, hydro-mechanical and thermo-hydro-mechanical phenomena in soils. 
@@ -717,7 +717,7 @@ $$
 
 where $$ n^\mathrm{s} $$ and $$ n^\mathrm{f} $$ are the volume fractions of the solid and fluid, respectively, and $$ \rho_\mathrm{s} $$ and $$ \rho_\mathrm{f} $$ are their real densities at the microscopic level. For a fluid-saturated porous medium, we have $$n^\mathrm{s} + n^\mathrm{f} = 1.$$ For simplicity in the following sections, we set $$ n^\mathrm{f} = n $$ and $$ n^\mathrm{s} = 1-n $$. We will refer to $$ n $$ as the porosity of the material.
 
-## Hydraulic Processes - $$ p $$ or $$ p\text{-}v $$ Formulation (#hydraulic)
+### Hydraulic Processes ($$ p $$ or $$ p\text{-}v $$ Formulation)
 
 Hydraulic processes in a porous medium are mainly described by the law of conservation of mass. The mass balance equation for the fluid phase according to  is
 
@@ -799,7 +799,7 @@ $$
 
 which results in the so called $$ p\text{-}v $$ formulation.
 
-## Hydro-Mechanical Processes $$ u\text{-}p $$ Formulation (#hydro-mechanical)
+### Hydro-Mechanical Processes ($$ u\text{-}p $$ Formulation)
 
 Hydro-mechanical processes couple the flow of fluid in a porous medium with solid deformation. The governing equations describing the coupling are derived by superposition of the individual linear momentum and mass balance equations of the solid and fluid phases.
 
@@ -882,7 +882,7 @@ $$
 
 For coupled hydro-mechanical (HM) processes in a porous medium, the mass balance equation in  and the linear momentum balance equation in  can be solved simultaneously for the displacement and pressure field variables. This results in what is known as a $$ u\text{-}p $$ formulation. Sometimes these equations are solved simultaneously with Darcy’s equation to obtain the displacement, pressure and Darcy’s velocity, leading to the so-called $$ u\text{-}p\text{-}v $$ formulation.
 
-## Thermo-Hydro-Mechanical Processes - $$ u\text{-}p\text{-}T $$ Formulation (#thm)
+### Thermo-Hydro-Mechanical Processes ($$ u\text{-}p\text{-}T $$ Formulation)
 
 Thermo-hydro-mechanical (THM) processes in a porous medium couple heat transfer and fluid flow with the deformation of solid. The governing equations describing the coupling are derived by superposition of the individual linear momentum, mass and energy balance equations of
 constituent phases.
