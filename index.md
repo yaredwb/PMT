@@ -32,13 +32,13 @@ making the necessary assumptions for particular application needs.
 The study of porous materials is essential in various disciplines of science and engineering such as soil mechanics, oil and reservoir engineering, biomechanics, material sciences and chemical engineering. The porous materials studied under porous media theory can either occur naturally, such as soils and rocks, or may be artificial, such as sponges and synthetic polymers. The physical and mechanical properties of such materials have been studied experimentally and mathematically over several decades by a number of researchers. Modern porous media theory, which will be discussed in detail in later sections, developed over a long period of time to reach to what is known today. The historical development of the theory is documented in some publications such as de Boer and Ehlers (1988)[^1] and de Boer (2003)[^2].
 
 There are some important milestones in the development of porous media theory, as presented in de Boer (1998)[^3]. In the earliest stages of the theory, Leonhard Euler presented the first discussion on the geometry of a porous medium and indirectly contributed to the formulation of the axioms of continuum mechanics. The introduction of the volume fraction concept by Reinhard Woltman in the 19th century proved to be a fundamental contribution. This concept was further discussed by Achille Delesse. The development of mixture theory, a branch of porous media theory, was initiated by Adolph Fick. An important mathematical relation describing the motion of a fluid in a porous medium was derived by Henry Darcy, which we refer to today as Darcy’s law. In early 20th century, Paul Fillunger and Karl von Terzaghi made seminal contributions to the theory of liquid-saturated porous solids. Fillunger developed equations for uplift forces while studying the stresses acting on concrete and masonry gravity dams. Terzaghi also studied uplift forces independently of Fillunger and further made contributions to the understanding of capillary pressure, the concept of effective stresses and soil consolidation theory. The effective stress concept was discussed earlier by Fillunger. After mid 20th century, the theory of porous media started taking shape to become what we know today. Some of the contributions in this period include work on the theory of mixtures by Green and Naghdi (1967)[^4], without using the volume fraction concept, the study of fluid motion in porous media by Whitaker (1969)[^5], modeling of simultaneous heat, mass and momentum transfer by Whitaker (1977)[^6], the treatment of the mechanics of continuous porous media by Prevost (1980)[^7], a theory of
-immiscible and structured mixtures by [@bedford1983theories] and a generalized approach to the derivation of balance laws by [@hassanizadeh1986derivation]. Application of the theory of mixtures to the modeling of incompressible and compressible porous media was presented by [@bowen1980incompressible] and [@bowen1982compressible], respectively. A discussion relating mixture theory and Biot’s approach to porous media theory can be found in [@coussy1998mixture].
+immiscible and structured mixtures by Bedford and Drumheller (1983)[^8] and a generalized approach to the derivation of balance laws by Hassanizadeh (1986)[^9]. Application of the theory of mixtures to the modeling of incompressible and compressible porous media was presented by Bowen (1980)[^10] and Bowen (1982) [^11], respectively. A discussion relating mixture theory and Biot’s approach to porous media theory can be found in Coussy et. al. (1986)[^12].
 
-In the following sections, the basic components of porous media theory are presented. The volume faction concept, a fundamental concept in porous media theory, is first discussed. The conservation laws of mass, momentum and energy are then presented in a general form for a porous medium with any number of constituents. The mechanics of phase change in a porous medium and how it affects the conservation laws is then treated. Constitutive equations that govern the constituents of the porous medium are required to complete the theory and these are discussed afterwards. These sections are presented in a brief way here and a detailed presentation of the topics may be referred from modern treatments of porous media theory such as in [@coussy2004poromechanics], [@vadasz2008emerging] and [@ehlers2013porous].
+In the following sections, the basic components of porous media theory are presented. The volume faction concept, a fundamental concept in porous media theory, is first discussed. The conservation laws of mass, momentum and energy are then presented in a general form for a porous medium with any number of constituents. The mechanics of phase change in a porous medium and how it affects the conservation laws is then treated. Constitutive equations that govern the constituents of the porous medium are required to complete the theory and these are discussed afterwards. These sections are presented in a brief way here and a detailed presentation of the topics may be referred from modern treatments of porous media theory such as in Coussy (2004)[^13], Vadasz (2008)[^14] and Ehlers and Bluhm (2013)[^15].
 
 # Volume Fraction Concept
 
-One of the most important concepts in the development of porous media theory is the volume fraction concept. This concept is used to a idealize a porous medium with multiple constituents as a homogeneous continuum. An important assumption in the volume fraction concept is that the solid constituent of the porous medium is considered as a reference volume such that only the fluid constituents can enter or leave the reference volume; see [@bluhm1997volume].
+One of the most important concepts in the development of porous media theory is the volume fraction concept. This concept is used to a idealize a porous medium with multiple constituents as a homogeneous continuum. An important assumption in the volume fraction concept is that the solid constituent of the porous medium is considered as a reference volume such that only the fluid constituents can enter or leave the reference volume; see Bluhm and de Boer (1997)[^16].
 
 Consider a porous medium composed of $$ N $$ constituents. Let $$ V $$ be the total volume of he porous medium and $$ V^\alpha $$ be the volume of phase $$ \alpha $$. Let $$ \mathrm{d}V $$ be a control volume element in the total volume and $$ \mathbf x $$ be its position vector in a global coordinate system at a given time $$ t $$. Similarly, let $$ \mathbf r $$ be the position vector of a microscopic volume element $$ \mathrm{d} V_\mathrm{\beta} $$ inside $$ \mathrm{d}V  $$. The volume of constituent $$ \alpha $$ within the control volume can be determined by first defining a phase distribution function $$ \chi^\alpha $$ such that 
 
@@ -67,7 +67,7 @@ $$
 \sum\limits_{\alpha=1}^{N} \mathrm{d} V^\alpha = \mathrm{d} V \quad \text{and} \quad \sum\limits_{\alpha=1}^{N} n^\alpha = 1.
 $$
 
-The volume fractions can now be used to describe the relationship between the densities of the constituents of the porous medium at microscopic and macroscopic levels. We denote the intrinsic real density of constituent $$ \alpha $$ by $$ \rho_\alpha $$ and the partial density at macroscale by $$ \rho^\alpha $$, following the notations according to [@prevost1980mechanics]. The relationship between these two densities in terms of the volume fraction of the phase under consideration is given by 
+The volume fractions can now be used to describe the relationship between the densities of the constituents of the porous medium at microscopic and macroscopic levels. We denote the intrinsic real density of constituent $$ \alpha $$ by $$ \rho_\alpha $$ and the partial density at macroscale by $$ \rho^\alpha $$, following the notations according to Prevost (1980)[^7]. The relationship between these two densities in terms of the volume fraction of the phase under consideration is given by 
 
 $$
 \rho^\alpha(\mathbf x,t) = n^\alpha(\mathbf x,t) \rho_\alpha(\mathbf x,t). \label{e:partialdensities}
@@ -81,7 +81,7 @@ $$
 
 # Kinematics
 
-Kinematic relations describing the relative motions of the phases in a porous medium are briefly discussed here. These relations will be used later in deriving the conservation laws for a porous medium. A detailed presentation may be referred from [@lewis1998finite].
+Kinematic relations describing the relative motions of the phases in a porous medium are briefly discussed here. These relations will be used later in deriving the conservation laws for a porous medium. A detailed presentation may be referred from Lewis and Schrefler (1998)[^17].
 
 According to the volume fraction concept, a porous medium composed of $$ N $$ constituents is approximated as a homogeneous continuum. Thus, a material point defined by the position vector $$ \mathbf x $$ is simultaneously occupied by all phases. Let $$ \mathbf X^\alpha $$ be the reference position of phase $$ \alpha $$ at time $$ t=t_\mathrm{o} $$. The position of each material point $$ \mathbf x^\alpha $$ of phase $$ \alpha $$ at time $$ t $$ may be written in a Lagrangian description as
 
@@ -185,7 +185,7 @@ $$
 
 The various physical processes within a porous medium induced by external and internal factors are described mathematically using  onservation laws, which describe the evolution of physical parameters relevant to the processes. The main conservation laws for a porous medium are mass, momentum and energy balance equations.
 
-The kinematic equations described in the previous section are used to derive the balance equations for a given porous medium. The derivation of these balance equations considers internal and external factors affecting the state of the porous medium and the interactions between the phases in the medium. This is required to ensure that the individual balance equations of the phases result in the balance equation of the whole mixture when superimposed; see [@hassanizadeh1980general]. In the following sections, the balance equations of mass, momentum and energy are derived for an individual phase in a porous medium and for the mixture as a whole. The presentation follows the works of [@de2006trends] and [@lewis1998finite].
+The kinematic equations described in the previous section are used to derive the balance equations for a given porous medium. The derivation of these balance equations considers internal and external factors affecting the state of the porous medium and the interactions between the phases in the medium. This is required to ensure that the individual balance equations of the phases result in the balance equation of the whole mixture when superimposed; see Hassanizadeh and Gray (1980)[^18]. In the following sections, the balance equations of mass, momentum and energy are derived for an individual phase in a porous medium and for the mixture as a whole. The presentation follows the works of de Boer (2006)[^19] and Lewis and Schrefler (1998)[^17].
 
 ## Mass Balance
 
@@ -420,7 +420,7 @@ The second law of thermodynamics (entropy inequality) is used to state the restr
 
 ## Entropy Inequality
 
-The assumption of entropy inequality for each phase $$ \alpha $$ is a sufficient but restrictive condition. For the existence of dissipation mechanisms within the porous medium, an entropy inequality for all the constituents is both a necessary and sufficient condition, [@de2006trends].
+The assumption of entropy inequality for each phase $$ \alpha $$ is a sufficient but restrictive condition. For the existence of dissipation mechanisms within the porous medium, an entropy inequality for all the constituents is both a necessary and sufficient condition, de Boer (2006)[^19].
 
 For phase $$ \alpha $$,  let
 
@@ -452,9 +452,9 @@ absolute temperature $$ T = T^\alpha $$.
 
 ## Phase Transitions
 
-The physical processes in a porous medium sometimes involve the transition of one phase into another such as phase change from liquid to vapor, liquid to solid or solid to liquid. These types of phase changes are referred to as first-order transitions, see [@de1999phase], whereas other transitions such as from a super fluid to ordinary fluid (e.g. helium) are called second-order transitions. The discussion here focuses on first-order transitions. We take a closer look here at the effect of phase transitions in a porous medium.
+The physical processes in a porous medium sometimes involve the transition of one phase into another such as phase change from liquid to vapor, liquid to solid or solid to liquid. These types of phase changes are referred to as first-order transitions, see de Boer and Bluhm (1999)[^20], whereas other transitions such as from a super fluid to ordinary fluid (e.g. helium) are called second-order transitions. The discussion here focuses on first-order transitions. We take a closer look here at the effect of phase transitions in a porous medium.
 
-The balance equations in Section \[sec:conservationlaws\] are presented in a general form such that the effect of phase transition(s) on the conserved quantities can be considered. Consider a two-phase porous medium where phase transition from one phase to another occurs, e.g. freezing/melting. The exchange of quantities during phase change remains constrained. For instance, the mass balance equations for the individual constituents, according to , are given by 
+The balance equations in the [conservation laws](#conservation-laws) section are presented in a general form such that the effect of phase transition(s) on the conserved quantities can be considered. Consider a two-phase porous medium where phase transition from one phase to another occurs, e.g. freezing/melting. The exchange of quantities during phase change remains constrained. For instance, the mass balance equations for the individual constituents, according to , are given by 
 
 $$
 \begin{aligned}
@@ -470,10 +470,10 @@ M^{\alpha\beta} + M^{\beta\alpha} = 0.
 $$ 
 
 Phase transitions in porous media have been studied in the past with several simplifying assumptions. The need for a rigorous mathematical and thermodynamical
-treatment of such problems was clear. Phase change from liquid to gas was given a detailed thermodynamic treatment, for example, by [@de1995thermodynamics] and [@de1995thermodynamics2], showing that the phase transition is governed by the difference of the chemical potentials of the constituents. A review of various phase change phenomena in porous media such as freezing/melting, boiling,
-drying/evaporation and condensation was presented by [@yortsos2001phase]. A detailed thermodynamic approach to various phase change problems can be found in [@fremond2012phase].
+treatment of such problems was clear. Phase change from liquid to gas was given a detailed thermodynamic treatment, for example, by de Boer and Kowalski (1995)[^21] and de Boer (1995)[^22], showing that the phase transition is governed by the difference of the chemical potentials of the constituents. A review of various phase change phenomena in porous media such as freezing/melting, boiling,
+drying/evaporation and condensation was presented by Yortsos and Stubos (2001)[^23]. A detailed thermodynamic approach to various phase change problems can be found in Fremond (2012)[^24].
 
-The thermodynamic equilibrium between the phases during phase change is described by the Clausius-Clapeyron equation. This equation can be derived based on the equilibrium requirement between the chemical potentials of the two phases; see [@loch1978thermodynamic] for the specific case of freezing and melting. For two phases $$ \alpha $$ and $$ \beta $$ undergoing phase transition, their chemical potentials are required to be in equilibrium, i.e. $$\mu^\alpha = \mu^\beta.$$ The
+The thermodynamic equilibrium between the phases during phase change is described by the Clausius-Clapeyron equation. This equation can be derived based on the equilibrium requirement between the chemical potentials of the two phases; see Loch (1978)[^25] for the specific case of freezing and melting. For two phases $$ \alpha $$ and $$ \beta $$ undergoing phase transition, their chemical potentials are required to be in equilibrium, i.e. $$\mu^\alpha = \mu^\beta.$$ The
 chemical potentials are a function of the specific entropies, the specific volumes, the pressures and the temperatures of the phases. In terms of these quantities, we have
 
 $$
@@ -508,11 +508,11 @@ $$
 
 # Conduction Laws
 
-The equations governing the flow of fluid and heat in a porous medium are given by Darcy’s law and Fourier’s law, respectively. We refer to these laws here as conduction laws, as used in [@coussy2004poromechanics].
+The equations governing the flow of fluid and heat in a porous medium are given by Darcy’s law and Fourier’s law, respectively. We refer to these laws here as conduction laws, as used in Coussy (2004)[^13].
 
 ## Darcy’s Law
 
-The specific discharge of fluid in a porous medium was shown to be proportional to the head loss based on experiments by Henry Darcy in 1857, [@verruijt2013theory]. Darcy’s law may be derived for fully saturated porous media from the fluid momentum balance equation, see for instance [@whitaker1986flow].
+The specific discharge of fluid in a porous medium was shown to be proportional to the head loss based on experiments by Henry Darcy in 1857, Verruijt (2013)[^26]. Darcy’s law may be derived for fully saturated porous media from the fluid momentum balance equation, see for instance Whitaker (1986)[^27].
 
 Darcy’s law relates the flow of fluid in a porous medium with respect to the solid phase as 
 
@@ -563,15 +563,15 @@ $$
 \mathbf q = -\lambda \nabla T
 $$
 
-where $$ \lambda $$ is the effective thermal conductivity coefficient which is a function of the individual thermal conductivities of the constituents of the porous medium and their volume fractions. Fourier’s law has a similar form both at the microscopic and macroscopic levels, [@coussy2004poromechanics].
+where $$ \lambda $$ is the effective thermal conductivity coefficient which is a function of the individual thermal conductivities of the constituents of the porous medium and their volume fractions. Fourier’s law has a similar form both at the microscopic and macroscopic levels, Coussy (2004)[^13].
 
 # Constitutive Laws
 
-The balance equations presented in Section \[sec:conservationlaws\] are valid for any porous medium. To complete these balance equations for a specific material, a constitutive model needs to be introduced, [@de2011computational]. We first introduce the effective stress concept before discussing the constitutive equations required to complete the description.
+The balance equations presented in [Conservation Laws](#conservation-laws) are valid for any porous medium. To complete these balance equations for a specific material, a constitutive model needs to be introduced, de Souza Neto et al. (2011)[^28]. We first introduce the effective stress concept before discussing the constitutive equations required to complete the description.
 
 ## The Effective Stress Concept
 
-The effective stress concept is widely used in porous media applications, especially in soil mechanics. The historical development of this concept is documented in [@de1990development]. The concept was already conceived and studied by scientists by the end of the 19th century. A significant development with a mathematical background came later in early 20th century from the significant contributions of Paul Fillunger and especially Karl von Terzaghi; see [@skempton1960terzaghi].
+The effective stress concept is widely used in porous media applications, especially in soil mechanics. The historical development of this concept is documented in de Boer and Ehlers (1990)[^29]. The concept was already conceived and studied by scientists by the end of the 19th century. A significant development with a mathematical background came later in early 20th century from the significant contributions of Paul Fillunger and especially Karl von Terzaghi; see Skempton (1960)[^30].
 
 The main idea behind effective stress in a porous medium is separating the stress that effectively causes solid deformation, hence the name, from all other stresses in the mixture. If we consider a porous medium composed of two phases, solid (s) and fluid (f), the total stress as the sum of the partial stresses is given according to  by
 
@@ -586,7 +586,7 @@ $$
 \mathbf \sigma^\mathrm{f} = n^\mathrm{f} \mathbf \sigma_\mathrm{f}
 $$ 
 
-where $$ n^\mathrm{f} $$ is the volume fraction of the fluid and $$ \mathbf \sigma_\mathrm{f} $$ is the pore fluid stress. However, a distinction should be made between the partial stress of the solid phase $$ \mathbf \sigma^\mathrm{s} $$ and the effective stress $$ \mathbf \sigma^\mathrm{\prime} $$; this has been discussed, for example, by [@prevost1980mechanics]. The partial stress of the solid phase is given by 
+where $$ n^\mathrm{f} $$ is the volume fraction of the fluid and $$ \mathbf \sigma_\mathrm{f} $$ is the pore fluid stress. However, a distinction should be made between the partial stress of the solid phase $$ \mathbf \sigma^\mathrm{s} $$ and the effective stress $$ \mathbf \sigma^\mathrm{\prime} $$; this has been discussed, for example, by Prevost (1980)[^7]. The partial stress of the solid phase is given by 
 
 $$
 \mathbf \sigma^\mathrm{s} = \mathbf \sigma^\mathrm{\prime} + n^\mathrm{s} \mathbf \sigma_\mathrm{f}
@@ -615,7 +615,7 @@ $$
 \label{e:volumetricstrain}
 $$ 
 
-where $$ K_\mathrm{s} $$ is the bulk modulus of the solid skeleton. The effective stress relation in  is usually modified by a corrective parameter known as Biot’s coefficient, $$ \alpha $$, [@lewis1998finite]. The modified effective stress equation (keeping the same notation for the modified effective stress) reads 
+where $$ K_\mathrm{s} $$ is the bulk modulus of the solid skeleton. The effective stress relation in  is usually modified by a corrective parameter known as Biot’s coefficient, $$ \alpha $$, Lewis and Schrefler (1998)[^17]. The modified effective stress equation (keeping the same notation for the modified effective stress) reads 
 
 $$
 \mathbf \sigma = \mathbf \sigma^\mathrm{\prime} + \alpha p \mathbf I
@@ -662,7 +662,7 @@ with $$ \boldsymbol{\mathit{1}} $$ being a matrix of ones, $$ E $$ is the Young�
 
 ## Compressibility of Phases
 
-For compressible phases in a porous medium, the density of a phase may be a function of pressure, temperature and other factors. We look at the equations of state for water, the most common fluid in a porous medium, and solid skeleton. See [@lewis1998finite].
+For compressible phases in a porous medium, the density of a phase may be a function of pressure, temperature and other factors. We look at the equations of state for water, the most common fluid in a porous medium, and solid skeleton. See Lewis and Schrefler (1998)[^17].
 
 The equation of state for water is given by
 
@@ -1009,3 +1009,28 @@ For THM coupled processes in a porous medium, the linear momentum, mass and ener
 [^5]: Whitaker, S. Advances in theory of fluid motion in porous media. *Industrial & Engineering Chemistry*, 61(12):14-28, 1969.
 [^6]: Whitaker, S. Simultaneous heat, mass, and momentum transfer in porous media: a theory of drying. *Advances in Heat Transfer*, 13:119-203, 1977.
 [^7]: Prevost, J. H. Mechanics of continuous porous media. *International Journal of Engineering Science*, 18(6):787-800, 1980.
+[^8]: Bedford, A. and Drumheller, D. S. Theories of immiscible and structured mixtures. *International Journal of Engineering Science*, 21(8):863-960, 1983.
+[^9]: Hassanizadeh, S. M. Derivation of basic equations of mass transport in porous media, part 1. macroscopic balance laws. *Advances in Water Resources*, 9(4):196-206, 1986.
+[^10]: Bowen, R. M. Incompressible porous media models by use of the theory of mixtures. *International Journal of Engineering Science*, 18(9):1129-1148, 1980.
+[^11]: Bowen, R. M. Compressible porous media models by use of the theory of mixtures. *International Journal of Engineering Science*, 20(6):697-735, 1982.
+[^12]: Coussy, O., Dormieux, L., and Detournay, E. From mixture theory to Biot's approach for porous media. *International Journal of Solids and Structures*, 35(34):4619-4635, 1998.
+[^13]: Coussy, O. *Poromechanics*. John Wiley & Sons, 2004.
+[^14]: Vadasz, P. *Emerging Topics in Heat and Mass Transfer in Porous Media: From Bioengineering and Microelectronics to Nanotechnology*, Volume 22. Springer
+Science & Business Media, 2008.
+[^15]: Ehlers, W. and Bluhm, J. *Porous Media: Theory, Experiments and Numerical Applications*. Springer Science & Business Media, 2013.
+[^16]: Bluhm, J. and de Boer, R. The volume fraction concept in the porous media theory. *ZAMM-Journal of Applied Mathematics and Mechanics/Zeitschrift fur Angewandte Mathematik und Mechanik*, 77(8):563-577, 1997.
+[^17]: Lewis, R. W. and Schrefler, B. A. *The Finite Element Method in the Static and Dynamic Deformation and Consolidation of Porous Media*. Wiley, 1998.
+[^18]: Hassanizadeh, M. and Gray, W. G. General conservation equations for multiphase systems: 3. constitutive theory for porous media flow. *Advances in Water Resources*, 3(1):25-40, 1980.
+[^19]: de Boer, R. *Trends in Continuum Mechanics of Porous Media*, Volume 18. Springer Science & Business Media, 2006.
+[^20]: de Boer, R. and Bluhm, J. Phase transitions in gas-and liquid-saturated porous solids. *Transport in Porous Media*, 34(1-3):249-267, 1999.
+[^21]: de Boer, R. and Kowalski, S. Thermodynamics of fluid-saturated porous media with a phase change. *Acta Mechanica*, 109(1-4):167-189, 1995.
+[^22]: de Boer, R. Thermodynamics of phase transitions in porous media. *Applied Mechanics Reviews*, 48(10):613-622, 1995.
+[^23]: Yortsos, Y. C. and Stubos, A. K. Phase change in porous media. *Current Opinion in Colloid & Interface Science*, 6(3):208-216, 2001.
+[^24]: Fremond, M. *Phase Change in Mechanics*, Volume 13. Springer Science & Business Media, 2012.
+[^25]: Loch, J. Thermodynamic equilibrium between ice and water in porous media. *Soil Science*, 126(2):77-80, 1978.
+[^26]: Verruijt, A. *Theory and Problems of Poroelasticity*. Delft University of Technology, 2013.
+[^27]: Whitaker, S. Flow in porous media I: A theoretical derivation of Darcy's law. *Transport in Porous Media*, 1(1):3-25, 1986.
+[^28]: de Souza Neto, E. A., Peric, D., and Owen, D. R. J. *Computational Methods for Plasticity: Theory and Applications*. John Wiley & Sons, 2011.
+[^29]: de Boer, R. and Ehlers, W. The development of the concept of effective stresses. *Acta Mechanica*, 83(1-2):77-92, 1990.
+[^30]: Skempton, A. W. Terzaghi's discovery of effective stress. *From Theory to Practice in Soil Mechanics: Selections from the Writings of Karl Terzaghi*, pages 42-53,
+1960.
