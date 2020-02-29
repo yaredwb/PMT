@@ -290,7 +290,7 @@ $$
 \nabla \cdot \mathbf \sigma + \rho \mathbf b = \rho \mathbf a.
 $$ 
 
-For a static condition ($ \mathbf a = \mathbf 0 $), this reduces to
+For a static condition ($$ \mathbf a = \mathbf 0 $$), this reduces to
 
 $$
 \nabla \cdot \mathbf \sigma + \rho \mathbf b = \mathbf 0.
@@ -1015,8 +1015,7 @@ For THM coupled processes in a porous medium, the linear momentum, mass and ener
 [^11]: Bowen, R. M. Compressible porous media models by use of the theory of mixtures. *International Journal of Engineering Science*, 20(6):697-735, 1982.
 [^12]: Coussy, O., Dormieux, L., and Detournay, E. From mixture theory to Biot's approach for porous media. *International Journal of Solids and Structures*, 35(34):4619-4635, 1998.
 [^13]: Coussy, O. *Poromechanics*. John Wiley & Sons, 2004.
-[^14]: Vadasz, P. *Emerging Topics in Heat and Mass Transfer in Porous Media: From Bioengineering and Microelectronics to Nanotechnology*, Volume 22. Springer
-Science & Business Media, 2008.
+[^14]: Vadasz, P. *Emerging Topics in Heat and Mass Transfer in Porous Media: From Bioengineering and Microelectronics to Nanotechnology*, Volume 22. Springer Science & Business Media, 2008.
 [^15]: Ehlers, W. and Bluhm, J. *Porous Media: Theory, Experiments and Numerical Applications*. Springer Science & Business Media, 2013.
 [^16]: Bluhm, J. and de Boer, R. The volume fraction concept in the porous media theory. *ZAMM-Journal of Applied Mathematics and Mechanics/Zeitschrift fur Angewandte Mathematik und Mechanik*, 77(8):563-577, 1997.
 [^17]: Lewis, R. W. and Schrefler, B. A. *The Finite Element Method in the Static and Dynamic Deformation and Consolidation of Porous Media*. Wiley, 1998.
@@ -1032,5 +1031,4 @@ Science & Business Media, 2008.
 [^27]: Whitaker, S. Flow in porous media I: A theoretical derivation of Darcy's law. *Transport in Porous Media*, 1(1):3-25, 1986.
 [^28]: de Souza Neto, E. A., Peric, D., and Owen, D. R. J. *Computational Methods for Plasticity: Theory and Applications*. John Wiley & Sons, 2011.
 [^29]: de Boer, R. and Ehlers, W. The development of the concept of effective stresses. *Acta Mechanica*, 83(1-2):77-92, 1990.
-[^30]: Skempton, A. W. Terzaghi's discovery of effective stress. *From Theory to Practice in Soil Mechanics: Selections from the Writings of Karl Terzaghi*, pages 42-53,
-1960.
+[^30]: Skempton, A. W. Terzaghi's discovery of effective stress. *From Theory to Practice in Soil Mechanics: Selections from the Writings of Karl Terzaghi*, pages 42-53, 1960.
