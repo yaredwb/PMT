@@ -113,21 +113,21 @@ $$
 For any differentiable function $$ f^\alpha $$ describing some physical property of phase $$ \alpha $$ in the porous medium, the *material time derivative* (also called *convective derivative* or *Lagrangian derivative*) is introduced to describe its rate of change relative to a chosen phase. If the Eulerian description of $$ f^\alpha =  f^\alpha (\mathbf x^\alpha,t) $$ is given, its material time derivative with respect to a moving particle of phase $$ \alpha $$ is defined by 
 
 $$
-\frac{\mathrm{d}_\alpha f^\alpha}{\mathrm{d} t} := \frac{\partial f^\alpha}{\partial t} + \nabla f^\alpha \cdot \mathbf v^\alpha.
+\frac{\mathrm{D}_\alpha f^\alpha}{\mathrm{D} t} := \frac{\partial f^\alpha}{\partial t} + \nabla f^\alpha \cdot \mathbf v^\alpha.
 \label{e:mtdwrtalpha}
 $$
 
 The material time derivative of $$ f^\alpha $$ with respect to a moving particle of another phase, say phase $$ \beta $$, is defined as
 
 $$
-\frac{\mathrm{d}_\beta f^\alpha}{\mathrm{d} t} := \frac{\partial f^\alpha}{\partial t} + \nabla f^\alpha \cdot \mathbf v^\beta.
+\frac{\mathrm{D}_\beta f^\alpha}{\mathrm{D} t} := \frac{\partial f^\alpha}{\partial t} + \nabla f^\alpha \cdot \mathbf v^\beta.
 \label{e:mtdwrtbeta}
 $$
 
 Equations ? and ? result in the relation
 
 $$
-\frac{\mathrm{d}_\beta f^\alpha}{\mathrm{d} t} = \frac{\mathrm{d}_\alpha f^\alpha}{\mathrm{d} t} + \nabla f^\alpha \cdot \mathbf v^{\beta \alpha}
+\frac{\mathrm{D}_\beta f^\alpha}{\mathrm{D} t} = \frac{\mathrm{D}_\alpha f^\alpha}{\mathrm{D} t} + \nabla f^\alpha \cdot \mathbf v^{\beta \alpha}
 \label{e:mtdwrtbetarel}
 $$
 
@@ -192,26 +192,26 @@ The kinematic equations described in the previous section are used to derive the
 The law of conservation of mass for phase $$ \alpha $$ requires that the rate of change of mass be equal to any other mass of that phase being added to or leaving from the system, internally from other constituents or externally from other sources. The rate of change of mass $$ M^\alpha $$ of phase $$ \alpha $$ over a domain $$ V $$ is described by
 
 $$
-\frac{\mathrm{d}_\alpha M^\alpha}{\mathrm{d} t} = \frac{\mathrm{d}_\alpha}{\mathrm{d} t} \int_{V} \rho^\alpha \mathrm{d} V
+\frac{\mathrm{D}_\alpha M^\alpha}{\mathrm{D} t} = \frac{\mathrm{D}_\alpha}{\mathrm{D} t} \int_{V} \rho^\alpha \mathrm{d} V
 $$
 
 and mass conservation requires this rate to be balanced with all mass exchanges among other phases, i.e.
 
 $$
-\frac{\mathrm{d}_\alpha}{\mathrm{d} t} \int_{V} \rho^\alpha \mathrm{d} V + \sum_{\beta} M^{\beta\alpha} = 0
+\frac{\mathrm{D}_\alpha}{\mathrm{D} t} \int_{V} \rho^\alpha \mathrm{d} V + \sum_{\beta} M^{\beta\alpha} = 0
 $$
 
 where the second term in the above equation represents the sum of mass exchanges per unit volume from all phases $$ \beta $$ to phase $$ \alpha $$. Applying Reynold’s transport theorem to the rate of change of $$ M^\alpha $$,  a generalized mass balance equation for phase $$ \alpha $$ can be written as
 
 $$
-\frac{\mathrm{d}_\alpha \rho^\alpha}{\mathrm{d} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + \sum_{\beta} M^{\beta\alpha} = 0.
+\frac{\mathrm{D}_\alpha \rho^\alpha}{\mathrm{D} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + \sum_{\beta} M^{\beta\alpha} = 0.
 \label{e:masbalalpha}
 $$ 
 
 The general mass balance equation for a porous medium with $$ N $$ constituents is then obtained by summation of the individual mass balance equations for each phase i.e.
 
 $$
-\sum\limits_{\alpha=1}^{N} \left[ \frac{\mathrm{d}_\alpha \rho^\alpha}{\mathrm{d} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + \sum_{\beta} M^{\beta\alpha} \right] = 0.
+\sum\limits_{\alpha=1}^{N} \left[ \frac{\mathrm{D}_\alpha \rho^\alpha}{\mathrm{D} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + \sum_{\beta} M^{\beta\alpha} \right] = 0.
 $$
 
 The mass exchange term between the phases has the constraint 
@@ -224,7 +224,7 @@ $$
 when summed over all the $$ N $$ constituents of the mixture, reducing the overall mass balance equation to
 
 $$
-\sum\limits_{\alpha=1}^{N} \left[ \frac{\mathrm{d}_\alpha \rho^\alpha}{\mathrm{d} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha \right] = 0.
+\sum\limits_{\alpha=1}^{N} \left[ \frac{\mathrm{D}_\alpha \rho^\alpha}{\mathrm{D} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha \right] = 0.
 $$
 
 In , the motion of a particle of phase $$ \alpha $$ is expressed relative to the same phase. In practice, it is more convenient to take one of the phases (usually the solid phase) as a reference to describe the motion of all other phases. The individual mass balance equations for these phases can then be modified by introducing their relative velocity with respect to the reference phase.
@@ -234,13 +234,13 @@ In , the motion of a particle of phase $$ \alpha $$ is expressed relative to th
 The balance of linear momentum for a given phase $$ \alpha $$ requires that the material time derivative its momentum $$ \mathbf P^\alpha $$ be in equilibrium with the sum of all internal interaction forces and external forces. The rate of change of momentum over a domain $$ V $$ is described by
 
 $$
-\frac{\mathrm{d}_\alpha \mathbf P^\alpha}{\mathrm{d} t} = \frac{\mathrm{d}_\alpha}{\mathrm{d} t} \int_{V} \rho^\alpha \mathbf v^\alpha \mathrm{d} V
+\frac{\mathrm{D}_\alpha \mathbf P^\alpha}{\mathrm{D} t} = \frac{\mathrm{D}_\alpha}{\mathrm{D} t} \int_{V} \rho^\alpha \mathbf v^\alpha \mathrm{d} V
 $$
 
 and the balance of linear momentum requires 
 
 $$
-\frac{\mathrm{d}_\alpha}{\mathrm{d} t} \int_{V} \rho^\alpha \mathbf v^\alpha \mathrm{d} V + \sum_{\beta} \mathbf P^{\beta\alpha} = \mathbf F^\alpha
+\frac{\mathrm{D}_\alpha}{\mathrm{D} t} \int_{V} \rho^\alpha \mathbf v^\alpha \mathrm{d} V + \sum_{\beta} \mathbf P^{\beta\alpha} = \mathbf F^\alpha
 $$
 
 where the second term represents the sum internal momentum exchanges over time to phase $$ \alpha $$ from all other phases $$ \beta $$ and $$ \mathbf F^\alpha $$ represents external forces. The external forces involve body forces $$ rho^\alpha \mathbf b^\alpha $$ acting on the constituents over the volume $$ V $$ and surface forces $$ \mathbf t^\alpha $$ acting on the boundary $$ \partial V $$ i.e.
@@ -314,7 +314,7 @@ $$
 Angular momentum balance requires
 
 $$
-\frac{\mathrm{d}_\alpha}{\mathrm{d} t} \int_{V} \mathbf x \times \rho^\alpha \mathbf v^\alpha \mathrm{d} V = \int_{V} \mathbf x \times \rho^\alpha \mathbf b^\alpha \mathrm{d} V + \int_{\partial V} \mathbf x \times \mathbf t^\alpha \mathrm{d} A
+\frac{\mathrm{D}_\alpha}{\mathrm{D} t} \int_{V} \mathbf x \times \rho^\alpha \mathbf v^\alpha \mathrm{d} V = \int_{V} \mathbf x \times \rho^\alpha \mathbf b^\alpha \mathrm{d} V + \int_{\partial V} \mathbf x \times \mathbf t^\alpha \mathrm{d} A
 $$
 
 where the moment of the exchanged momentum between the phases is omitted. Simplifying the above equation by applying the mass balance and momentum balance principles derived earlier gives
@@ -348,7 +348,7 @@ Thus, the conservation of angular momentum proves that Cauchy’s stress tensor 
 The law of conservation of energy, the first law of thermodynamics, requires that the rate of change of the internal and kinetic energies be balanced by the rate of mechanical work and heat. For phase $$ \alpha $$ in a porous medium, this is written mathematically as
 
 $$
-\frac{\mathrm{d}_\alpha E^\alpha}{\mathrm{d} t} + \frac{\mathrm{d}_\alpha K^\alpha}{\mathrm{d} t} + \sum\limits_{\beta} E^{\beta \alpha} = W^\alpha + H^\alpha
+\frac{\mathrm{D}_\alpha E^\alpha}{\mathrm{D} t} + \frac{\mathrm{D}_\alpha K^\alpha}{\mathrm{D} t} + \sum\limits_{\beta} E^{\beta \alpha} = W^\alpha + H^\alpha
 \label{e:thermodynamics}
 $$ 
 
@@ -371,7 +371,7 @@ Using  in , simplifying the material time derivatives of the integrals and uti
 
 $$
 \begin{aligned}
-\rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) + \rho^\alpha \mathbf v^\alpha \cdot \mathbf a^\alpha - \mathbf \sigma^\alpha : \mathbf L^\alpha  \\
+\rho^\alpha \frac{\mathrm{D}_\alpha e^\alpha}{\mathrm{D} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) + \rho^\alpha \mathbf v^\alpha \cdot \mathbf a^\alpha - \mathbf \sigma^\alpha : \mathbf L^\alpha  \\
 - \mathbf v^\alpha \cdot \left( \nabla \cdot \mathbf \sigma^\alpha + \rho^\alpha \mathbf b^\alpha \right) + \nabla \cdot \mathbf q^\alpha + \sum\limits_{\beta} E^{\beta \alpha} = Q^\alpha
 \end{aligned}
 \label{e:enebalalpha}
@@ -381,7 +381,7 @@ where $$ Q^\alpha = \rho^\alpha h^\alpha $$ is the heat supply to phase $$ \alph
 
 $$
 \begin{aligned}
-\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) + \rho^\alpha \mathbf v^\alpha \cdot \mathbf a^\alpha - \mathbf \sigma^\alpha : \mathbf L^\alpha \right. \\
+\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{D}_\alpha e^\alpha}{\mathrm{D} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) + \rho^\alpha \mathbf v^\alpha \cdot \mathbf a^\alpha - \mathbf \sigma^\alpha : \mathbf L^\alpha \right. \\
 - \left. \mathbf v^\alpha \cdot \left( \nabla \cdot \mathbf \sigma^\alpha + \rho^\alpha \mathbf b^\alpha \right) + \nabla \cdot \mathbf q^\alpha + \sum\limits_{\beta} E^{\beta \alpha} \right] = \sum\limits_{\alpha=1}^{N} Q^\alpha.
 \end{aligned}
 $$ 
@@ -390,7 +390,7 @@ If the momentum exchange between the phases is assumed to be zero, the energy ba
 
 $$
 \begin{aligned}
-\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) - \mathbf \sigma^\alpha : \mathbf L^\alpha \right. \\
+\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{D}_\alpha e^\alpha}{\mathrm{D} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) - \mathbf \sigma^\alpha : \mathbf L^\alpha \right. \\
 + \left. \nabla \cdot \mathbf q^\alpha + \sum\limits_{\beta} E^{\beta \alpha} \right] = \sum\limits_{\alpha=1}^{N} Q^\alpha.
 \end{aligned}
 \label{e:enebal}
@@ -411,7 +411,7 @@ $$
 This reduces the energy balance equation to
 
 $$
-\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) - \mathbf \sigma^\alpha : \mathbf L^\alpha \right] + \nabla \cdot \mathbf q  = Q.
+\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{D}_\alpha e^\alpha}{\mathrm{D} t} - \sum\limits_{\beta} M^{\beta \alpha} \left( e^\alpha - \frac{1}{2} \mathbf v^\alpha \cdot \mathbf v^\alpha \right) - \mathbf \sigma^\alpha : \mathbf L^\alpha \right] + \nabla \cdot \mathbf q  = Q.
 $$
 
 # Thermodynamics and Phase Change
@@ -431,13 +431,13 @@ $$
 be its entropy where $$ s^\alpha $$ is the specific entropy. With $$ T^\alpha $$ as the absolute temperature of phase $$ \alpha $$, the entropy inequality for all the constituents of the porous medium is expressed as
 
 $$
-\sum\limits_{\alpha=1}^{N} \frac{\mathrm{d}_\alpha S^\alpha}{\mathrm{d} t} \geq \sum\limits_{\alpha=1}^{N} \int_{V} \frac{1}{T^\alpha} \rho^\alpha h^\alpha \mathrm{d} V - \sum\limits_{\alpha=1}^{N} \int_{\partial V} \frac{1}{T^\alpha} \mathbf q^\alpha \cdot \mathrm{d} A.
+\sum\limits_{\alpha=1}^{N} \frac{\mathrm{D}_\alpha S^\alpha}{\mathrm{D} t} \geq \sum\limits_{\alpha=1}^{N} \int_{V} \frac{1}{T^\alpha} \rho^\alpha h^\alpha \mathrm{d} V - \sum\limits_{\alpha=1}^{N} \int_{\partial V} \frac{1}{T^\alpha} \mathbf q^\alpha \cdot \mathrm{d} A.
 $$
 
 Performing the material time derivative in the above equation using the transport theorem, utilizing the mass balance equation and the divergence theorem, the local form of the entropy inequality becomes
 
 $$
-\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{d}_\alpha s^\alpha}{\mathrm{d} t} - \sum\limits_{\beta} M^{\beta \alpha} s^\alpha - \frac{1}{T^\alpha} \rho^\alpha h^\alpha + \nabla \cdot \left( \frac{1}{T^\alpha} \mathbf q^\alpha \right) \right] \geq 0.
+\sum\limits_{\alpha=1}^{N} \left[ \rho^\alpha \frac{\mathrm{D}_\alpha s^\alpha}{\mathrm{D} t} - \sum\limits_{\beta} M^{\beta \alpha} s^\alpha - \frac{1}{T^\alpha} \rho^\alpha h^\alpha + \nabla \cdot \left( \frac{1}{T^\alpha} \mathbf q^\alpha \right) \right] \geq 0.
 \label{e:entropyineq}
 $$
 
@@ -458,8 +458,8 @@ The balance equations in Section \[sec:conservationlaws\] are presented in a gen
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}_\alpha \rho^\alpha}{\mathrm{d} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + M^{\beta\alpha} &= 0 \\
-\frac{\mathrm{d}_\beta \rho^\beta}{\mathrm{d} t} + \rho^\beta \nabla \cdot \mathbf v^\beta + M^{\alpha\beta} &= 0
+\frac{\mathrm{D}_\alpha \rho^\alpha}{\mathrm{D} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + M^{\beta\alpha} &= 0 \\
+\frac{\mathrm{D}_\beta \rho^\beta}{\mathrm{D} t} + \rho^\beta \nabla \cdot \mathbf v^\beta + M^{\alpha\beta} &= 0
 \end{aligned}
 $$ 
 
@@ -680,27 +680,27 @@ $$
 which can then be used to derive
 
 $$
-\frac{1}{\rho_{\mathrm{w}\mathrm{o}}} \frac{\mathrm{d}_\mathrm{w} \rho_\mathrm{w}}{\mathrm{d} t} = \frac{1}{K_\mathrm{w}} \frac{\mathrm{d}_\mathrm{w} p^\mathrm{w}}{\mathrm{d} t} - \alpha_\mathrm{w} \frac{\mathrm{d}_\mathrm{w} T}{\mathrm{d} t}.
+\frac{1}{\rho_{\mathrm{w}\mathrm{o}}} \frac{\mathrm{D}_\mathrm{w} \rho_\mathrm{w}}{\mathrm{D} t} = \frac{1}{K_\mathrm{w}} \frac{\mathrm{D}_\mathrm{w} p^\mathrm{w}}{\mathrm{D} t} - \alpha_\mathrm{w} \frac{\mathrm{D}_\mathrm{w} T}{\mathrm{D} t}.
 \label{e:eqofstatewater}
 $$ 
 
 For a compressible solid phase, the material time derivative of the density may be derived from the mass balance of the solid:
 
 $$
-\frac{\mathrm{d}_\mathrm{s} (\rho^\mathrm{s} V^\mathrm{s})}{\mathrm{d} t} = 0.
+\frac{\mathrm{D}_\mathrm{s} (\rho^\mathrm{s} V^\mathrm{s})}{\mathrm{D} t} = 0.
 $$
 
 The solid density is a function of the average pressure on the solid from all other phases $$ p^s $$, the temperature $$ T $$ and the first invariant of the effective stress $$ \text{tr}~\mathbf \sigma^\prime $$. The variation of the solid density may then be written as
 
 $$
-\frac{1}{\rho_\mathrm{s}} \frac{\mathrm{d}_\mathrm{s} \rho_\mathrm{s}}{\mathrm{d} t} = \frac{1}{K_\mathrm{s}} \frac{\mathrm{d}_\mathrm{s} p^\mathrm{s}}{\mathrm{d} t} - \alpha_\mathrm{s} \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} - \frac{1}{3(n-1)K_\mathrm{s}} \frac{\mathrm{d}_\mathrm{s} (\text{tr}~\mathbf \sigma^\prime)}{\mathrm{d} t}
+\frac{1}{\rho_\mathrm{s}} \frac{\mathrm{D}_\mathrm{s} \rho_\mathrm{s}}{\mathrm{D} t} = \frac{1}{K_\mathrm{s}} \frac{\mathrm{D}_\mathrm{s} p^\mathrm{s}}{\mathrm{D} t} - \alpha_\mathrm{s} \frac{\mathrm{D}_\mathrm{s} T}{\mathrm{D} t} - \frac{1}{3(n-1)K_\mathrm{s}} \frac{\mathrm{D}_\mathrm{s} (\text{tr}~\mathbf \sigma^\prime)}{\mathrm{D} t}
 $$
 
 where $$ \alpha_\mathrm{s} $$ is the thermal expansion coefficient of the solid. The first term on the right hand side of the equation above represents the volumetric strain of the solid. This strain may be negligible for soils but significant for materials such as rock. Introducing a
 constitutive equation for the first invariant of the effective stress and using Biot’s coefficient from , an alternative form of the solid compressibility may be written as
 
 $$
-\frac{1}{\rho_\mathrm{s}} \frac{\mathrm{d}_\mathrm{s} \rho_\mathrm{s}}{\mathrm{d} t} = \frac{1}{1-n} \left[  \frac{\alpha-n}{K_\mathrm{s}} \frac{\mathrm{d}_\mathrm{s} p^\mathrm{s}}{\mathrm{d} t} - \alpha_\mathrm{s} (\alpha-n) \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} - (1-\alpha) \nabla \cdot \mathbf v^\mathrm{s} \right].
+\frac{1}{\rho_\mathrm{s}} \frac{\mathrm{D}_\mathrm{s} \rho_\mathrm{s}}{\mathrm{D} t} = \frac{1}{1-n} \left[  \frac{\alpha-n}{K_\mathrm{s}} \frac{\mathrm{D}_\mathrm{s} p^\mathrm{s}}{\mathrm{D} t} - \alpha_\mathrm{s} (\alpha-n) \frac{\mathrm{D}_\mathrm{s} T}{\mathrm{D} t} - (1-\alpha) \nabla \cdot \mathbf v^\mathrm{s} \right].
 \label{e:compressiblesolid}
 $$
 
@@ -725,13 +725,13 @@ where $$ n^\mathrm{s} $$ and $$ n^\mathrm{f} $$ are the volume fractions of the 
 Hydraulic processes in a porous medium are mainly described by the law of conservation of mass. The mass balance equation for the fluid phase according to  is
 
 $$
-\frac{\mathrm{d}_\mathrm{f} \rho^\mathrm{f}}{\mathrm{d} t} + \rho^\mathrm{f} \nabla \cdot \mathbf v^\mathrm{f} = 0
+\frac{\mathrm{D}_\mathrm{f} \rho^\mathrm{f}}{\mathrm{D} t} + \rho^\mathrm{f} \nabla \cdot \mathbf v^\mathrm{f} = 0
 $$
 
 in which we have ignored any mass exchange between the solid and fluid phases. Considering the flow of the fluid with respect to the solid phase, we write the material time derivative of $$ \rho^\mathrm{f} $$ according to  as
 
 $$
-\frac{\mathrm{d}_\mathrm{s} \rho^\mathrm{f}}{\mathrm{d} t} - \nabla \rho^\mathrm{f} \cdot \mathbf v^{\mathrm{s} \mathrm{f}} + \rho^\mathrm{f} \nabla \cdot \mathbf v^\mathrm{f} = 0
+\frac{\mathrm{D}_\mathrm{s} \rho^\mathrm{f}}{\mathrm{D} t} - \nabla \rho^\mathrm{f} \cdot \mathbf v^{\mathrm{s} \mathrm{f}} + \rho^\mathrm{f} \nabla \cdot \mathbf v^\mathrm{f} = 0
 $$
 
 which, according to , becomes
@@ -816,7 +816,7 @@ $$
 The mass balance equation for the solid phase, based on , is given by
 
 $$
-\frac{\mathrm{d}_\mathrm{s} \rho^\mathrm{s}}{\mathrm{d} t} + \rho^\mathrm{s} \nabla \cdot \mathbf v^\mathrm{s} = 0.
+\frac{\mathrm{D}_\mathrm{s} \rho^\mathrm{s}}{\mathrm{D} t} + \rho^\mathrm{s} \nabla \cdot \mathbf v^\mathrm{s} = 0.
 $$
 
 From  we have $$ \rho^\mathrm{s} = (1-n) \rho_\mathrm{s} $$. Using this in the above equation, and neglecting spatial variations in the porosity and the solid density, gives
@@ -914,15 +914,15 @@ thermal expansion coefficient of the porous medium.
 The energy balance equation for a single phase, neglecting any mass, momentum and energy exchanges between the solid and fluid phases, is obtained from  as
 
 $$
-\rho^\alpha \frac{\mathrm{d}_\alpha e^\alpha}{\mathrm{d} t} - \mathbf \sigma^\alpha : \mathbf L^\alpha + \nabla \cdot \mathbf q^\alpha = Q^\alpha
+\rho^\alpha \frac{\mathrm{D}_\alpha e^\alpha}{\mathrm{D} t} - \mathbf \sigma^\alpha : \mathbf L^\alpha + \nabla \cdot \mathbf q^\alpha = Q^\alpha
 $$
 
 The individual energy balance equations for the solid and fluid phases are then written as 
 
 $$
 \begin{aligned}
-\rho^\mathrm{s} \frac{\mathrm{d}_\mathrm{s} e^\mathrm{s}}{\mathrm{d} t} - \mathbf \sigma^\mathrm{s} : \mathbf L^\mathrm{s} + \nabla \cdot \mathbf q^\mathrm{s} = Q^\mathrm{s} \\
-\rho^\mathrm{f} \frac{\mathrm{d}_\mathrm{f} e^\mathrm{f}}{\mathrm{d} t} - \mathbf \sigma^\mathrm{f} : \mathbf L^\mathrm{f} + \nabla \cdot \mathbf q^\mathrm{f} = Q^\mathrm{f}.
+\rho^\mathrm{s} \frac{\mathrm{D}_\mathrm{s} e^\mathrm{s}}{\mathrm{D} t} - \mathbf \sigma^\mathrm{s} : \mathbf L^\mathrm{s} + \nabla \cdot \mathbf q^\mathrm{s} = Q^\mathrm{s} \\
+\rho^\mathrm{f} \frac{\mathrm{D}_\mathrm{f} e^\mathrm{f}}{\mathrm{D} t} - \mathbf \sigma^\mathrm{f} : \mathbf L^\mathrm{f} + \nabla \cdot \mathbf q^\mathrm{f} = Q^\mathrm{f}.
 \end{aligned}
 $$ 
 
@@ -930,8 +930,8 @@ Viscous dissipation may be significant in applications where the material flows 
 
 $$
 \begin{aligned}
-\rho^\mathrm{s} \frac{\mathrm{d}_\mathrm{s} e^\mathrm{s}}{\mathrm{d} t} + \nabla \cdot \mathbf q^\mathrm{s} = Q^\mathrm{s} \\
-\rho^\mathrm{f} \frac{\mathrm{d}_\mathrm{s} e^\mathrm{f}}{\mathrm{d} t} + \rho^\mathrm{f} \nabla e^\mathrm{f} \cdot (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) + \nabla \cdot \mathbf q^\mathrm{f} = Q^\mathrm{f}
+\rho^\mathrm{s} \frac{\mathrm{D}_\mathrm{s} e^\mathrm{s}}{\mathrm{D} t} + \nabla \cdot \mathbf q^\mathrm{s} = Q^\mathrm{s} \\
+\rho^\mathrm{f} \frac{\mathrm{D}_\mathrm{s} e^\mathrm{f}}{\mathrm{D} t} + \rho^\mathrm{f} \nabla e^\mathrm{f} \cdot (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) + \nabla \cdot \mathbf q^\mathrm{f} = Q^\mathrm{f}
 \end{aligned}
 \label{e:enebalTHM0}
 $$ 
@@ -947,8 +947,8 @@ Applying these to  gives
 
 $$
 \begin{aligned}
-\rho^\mathrm{s} c_\mathrm{s} \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} + \nabla \cdot \mathbf q^\mathrm{s} = Q^\mathrm{s} \\
-\rho^\mathrm{f} c_\mathrm{f} \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} + \rho^\mathrm{f} c_\mathrm{f} \nabla T \cdot (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) + \nabla \cdot \mathbf q^\mathrm{f} = Q^\mathrm{f}.
+\rho^\mathrm{s} c_\mathrm{s} \frac{\mathrm{D}_\mathrm{s} T}{\mathrm{D} t} + \nabla \cdot \mathbf q^\mathrm{s} = Q^\mathrm{s} \\
+\rho^\mathrm{f} c_\mathrm{f} \frac{\mathrm{D}_\mathrm{s} T}{\mathrm{D} t} + \rho^\mathrm{f} c_\mathrm{f} \nabla T \cdot (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) + \nabla \cdot \mathbf q^\mathrm{f} = Q^\mathrm{f}.
 \end{aligned}
 \label{e:enebalTHM1}
 $$ 
@@ -956,7 +956,7 @@ $$
 Summation of the individual balance equations gives the overall energy balance equation for the porous medium as
 
 $$
-(\rho^\mathrm{s} c_\mathrm{s} + \rho^\mathrm{f} c_\mathrm{f}) \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} + \rho^\mathrm{f} c_\mathrm{f} \nabla T \cdot (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) + \nabla \cdot \mathbf q = Q
+(\rho^\mathrm{s} c_\mathrm{s} + \rho^\mathrm{f} c_\mathrm{f}) \frac{\mathrm{D}_\mathrm{s} T}{\mathrm{D} t} + \rho^\mathrm{f} c_\mathrm{f} \nabla T \cdot (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) + \nabla \cdot \mathbf q = Q
 \label{e:enebalTHM2}
 $$ 
 
@@ -981,14 +981,14 @@ and noting that $$ \mathbf w = n (\mathbf v^\mathrm{f} - \mathbf v^\mathrm{s}) $
 velocity,  is further simplified to obtain the energy balance equation for the medium as
 
 $$
-(\rho c)_\mathrm{e}f \frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} + \rho_\mathrm{f} c_\mathrm{f}  \mathbf w \cdot \nabla T + \nabla \cdot \mathbf q = Q.
+(\rho c)_\mathrm{e}f \frac{\mathrm{D}_\mathrm{s} T}{\mathrm{D} t} + \rho_\mathrm{f} c_\mathrm{f}  \mathbf w \cdot \nabla T + \nabla \cdot \mathbf q = Q.
 \label{e:enebalTHM3}
 $$ 
 
 The material time derivative of the temperature with respect to the solid phase is given by
 
 $$
-\frac{\mathrm{d}_\mathrm{s} T}{\mathrm{d} t} = \frac{\partial T}{\partial t} + \nabla T \cdot \mathbf v^\mathrm{s}.
+\frac{\mathrm{D}_\mathrm{s} T}{\mathrm{D} t} = \frac{\partial T}{\partial t} + \nabla T \cdot \mathbf v^\mathrm{s}.
 $$ 
 
 For the applications of interest in this thesis, the convective heat flux in the solid phase is usually negligible i.e. $$ \nabla T \cdot \mathbf v^\mathrm{s} \approx $$ 0. With this assumption and using Fourier’s law, , in , the energy balance equation for the medium becomes
