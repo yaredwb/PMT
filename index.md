@@ -1003,7 +1003,7 @@ For THM coupled processes in a porous medium, the linear momentum, mass and ener
 **References**
 
 [^1]: de Boer, R. and Ehlers, W. A historical review of the formulation of porous media theories. *Acta Mechanica*, 74(1-4):1-8, 1988.
-[^2]: de Boer, R. Reections on the development of the theory of porous media. *Applied Mechanics Reviews*, 56(6):R27{R42, 2003.
+[^2]: de Boer, R. Reflections on the development of the theory of porous media. *Applied Mechanics Reviews*, 56(6):R27{R42, 2003.
 [^3]: de Boer, R. Theory of porous media - past and present. *ZAMM-Journal of Applied Mathematics and Mechanics*/*Zeitschrift fur Angewandte Mathematik undMechanik*, 78(7):441-466, 1998.
 [^4]: Green, A. E. and Naghdi, P. M. A theory of mixtures. *Archive for Rational Mechanics and Analysis*, 24(4):243-263, 1967.
 [^5]: Whitaker, S. Advances in theory of fluid motion in porous media. *Industrial & Engineering Chemistry*, 61(12):14-28, 1969.
