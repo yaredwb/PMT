@@ -94,7 +94,6 @@ An Eulerian description of motion may be written for a non-singular Lagrangian d
 
 $$
 \mathbf X^\alpha = \mathbf X^\alpha(\mathbf x^\alpha,t).
-\tag{}
 $$ 
 
 For a particle of phase $$ \alpha $$ with a defined path, Lagrangian descriptions of the elocity and acceleration are 
