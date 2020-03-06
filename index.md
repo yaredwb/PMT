@@ -2,6 +2,7 @@
 layout: default
 title: Porous Media Theory
 bibliography: pmt.bib
+mathjax: true
 ---
 
 #### Author: [Yared W. Bekele](https://yaredwb.com/)
@@ -93,6 +94,7 @@ An Eulerian description of motion may be written for a non-singular Lagrangian d
 
 $$
 \mathbf X^\alpha = \mathbf X^\alpha(\mathbf x^\alpha,t).
+\tag{}
 $$ 
 
 For a particle of phase $$ \alpha $$ with a defined path, Lagrangian descriptions of the elocity and acceleration are 
@@ -104,7 +106,7 @@ $$
 \end{aligned}
 $$ 
 
-Eulerian description of the velocity and acceleration may be derived by using  in . Given an Eulerian description of the velocity $$ \mathbf v^\alpha(\mathbf x^\alpha,t) $$, the Eulerian acceleration $$ \mathbf a^\alpha $$ may be derived by evaluating the time derivative of the velocity where the Lagrangian coordinates are held constant. That is, by applying the chain rule
+Eulerian description of the velocity and acceleration may be derived by using \ref{e:xalpha} in . Given an Eulerian description of the velocity $$ \mathbf v^\alpha(\mathbf x^\alpha,t) $$, the Eulerian acceleration $$ \mathbf a^\alpha $$ may be derived by evaluating the time derivative of the velocity where the Lagrangian coordinates are held constant. That is, by applying the chain rule
 
 $$
 \mathbf a^\alpha = \frac{\partial \mathbf v^\alpha}{\partial t} + \nabla \mathbf v^\alpha \cdot \mathbf v^\alpha.
