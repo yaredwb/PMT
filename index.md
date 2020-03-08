@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Porous Media Theory
+permalink: /porous-media-theory/
 bibliography: pmt.bib
 mathjax: true
 ---
