@@ -109,6 +109,7 @@ An Eulerian description of motion may be written for a non-singular Lagrangian d
 $$
 \begin{equation}
 \mathbf X^\alpha = \mathbf X^\alpha(\mathbf x^\alpha,t).
+\label{e:xalpha}
 \end{equation}
 $$ 
 
@@ -120,10 +121,11 @@ $$
 \mathbf V^\alpha &= \frac{\partial \mathbf x^\alpha(\mathbf X^\alpha,t)}{\partial t} \\
 \mathbf A^\alpha &= \frac{\partial^2 \mathbf x^\alpha(\mathbf X^\alpha,t)}{\partial t^2}.
 \end{aligned}
+\label{e:vaalpha}
 \end{equation}
 $$ 
 
-Eulerian description of the velocity and acceleration may be derived by using \ref{e:xalpha} in . Given an Eulerian description of the velocity $$ \mathbf v^\alpha(\mathbf x^\alpha,t) $$, the Eulerian acceleration $$ \mathbf a^\alpha $$ may be derived by evaluating the time derivative of the velocity where the Lagrangian coordinates are held constant. That is, by applying the chain rule
+Eulerian description of the velocity and acceleration may be derived by using \ref{e:xalpha} in \ref{e:vaalpha}. Given an Eulerian description of the velocity $$ \mathbf v^\alpha(\mathbf x^\alpha,t) $$, the Eulerian acceleration $$ \mathbf a^\alpha $$ may be derived by evaluating the time derivative of the velocity where the Lagrangian coordinates are held constant. That is, by applying the chain rule
 
 $$
 \begin{equation}
@@ -233,108 +235,140 @@ The kinematic equations described in the previous section are used to derive the
 The law of conservation of mass for phase $$ \alpha $$ requires that the rate of change of mass be equal to any other mass of that phase being added to or leaving from the system, internally from other constituents or externally from other sources. The rate of change of mass $$ M^\alpha $$ of phase $$ \alpha $$ over a domain $$ V $$ is described by
 
 $$
+\begin{equation}
 \frac{\mathrm{D}_\alpha M^\alpha}{\mathrm{D} t} = \frac{\mathrm{D}_\alpha}{\mathrm{D} t} \int_{V} \rho^\alpha \mathrm{d} V
+\end{equation}
 $$
 
 and mass conservation requires this rate to be balanced with all mass exchanges among other phases, i.e.
 
 $$
+\begin{equation}
 \frac{\mathrm{D}_\alpha}{\mathrm{D} t} \int_{V} \rho^\alpha \mathrm{d} V + \sum_{\beta} M^{\beta\alpha} = 0
+\end{equation}
 $$
 
 where the second term in the above equation represents the sum of mass exchanges per unit volume from all phases $$ \beta $$ to phase $$ \alpha $$. Applying Reynold’s transport theorem to the rate of change of $$ M^\alpha $$,  a generalized mass balance equation for phase $$ \alpha $$ can be written as
 
 $$
+\begin{equation}
 \frac{\mathrm{D}_\alpha \rho^\alpha}{\mathrm{D} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + \sum_{\beta} M^{\beta\alpha} = 0.
 \label{e:masbalalpha}
+\end{equation}
 $$ 
 
 The general mass balance equation for a porous medium with $$ N $$ constituents is then obtained by summation of the individual mass balance equations for each phase i.e.
 
 $$
+\begin{equation}
 \sum\limits_{\alpha=1}^{N} \left[ \frac{\mathrm{D}_\alpha \rho^\alpha}{\mathrm{D} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha + \sum_{\beta} M^{\beta\alpha} \right] = 0.
+\end{equation}
 $$
 
 The mass exchange term between the phases has the constraint 
 
 $$
+\begin{equation}
 \sum\limits_{\alpha=1}^{N} \sum_{\beta} M^{\beta\alpha} = 0
 \label{e:massconstraint}
+\end{equation}
 $$ 
 
 when summed over all the $$ N $$ constituents of the mixture, reducing the overall mass balance equation to
 
 $$
+\begin{equation}
 \sum\limits_{\alpha=1}^{N} \left[ \frac{\mathrm{D}_\alpha \rho^\alpha}{\mathrm{D} t} + \rho^\alpha \nabla \cdot \mathbf v^\alpha \right] = 0.
+\end{equation}
 $$
 
-In , the motion of a particle of phase $$ \alpha $$ is expressed relative to the same phase. In practice, it is more convenient to take one of the phases (usually the solid phase) as a reference to describe the motion of all other phases. The individual mass balance equations for these phases can then be modified by introducing their relative velocity with respect to the reference phase.
+In \ref{e:masbalalpha}, the motion of a particle of phase $$ \alpha $$ is expressed relative to the same phase. In practice, it is more convenient to take one of the phases (usually the solid phase) as a reference to describe the motion of all other phases. The individual mass balance equations for these phases can then be modified by introducing their relative velocity with respect to the reference phase.
 
 ## Linear Momentum Balance
 
 The balance of linear momentum for a given phase $$ \alpha $$ requires that the material time derivative its momentum $$ \mathbf P^\alpha $$ be in equilibrium with the sum of all internal interaction forces and external forces. The rate of change of momentum over a domain $$ V $$ is described by
 
 $$
+\begin{equation}
 \frac{\mathrm{D}_\alpha \mathbf P^\alpha}{\mathrm{D} t} = \frac{\mathrm{D}_\alpha}{\mathrm{D} t} \int_{V} \rho^\alpha \mathbf v^\alpha \mathrm{d} V
+\end{equation}
 $$
 
 and the balance of linear momentum requires 
 
 $$
+\begin{equation}
 \frac{\mathrm{D}_\alpha}{\mathrm{D} t} \int_{V} \rho^\alpha \mathbf v^\alpha \mathrm{d} V + \sum_{\beta} \mathbf P^{\beta\alpha} = \mathbf F^\alpha
+\end{equation}
 $$
 
 where the second term represents the sum internal momentum exchanges over time to phase $$ \alpha $$ from all other phases $$ \beta $$ and $$ \mathbf F^\alpha $$ represents external forces. The external forces involve body forces $$ rho^\alpha \mathbf b^\alpha $$ acting on the constituents over the volume $$ V $$ and surface forces $$ \mathbf t^\alpha $$ acting on the boundary $$ \partial V $$ i.e.
 
 $$
+\begin{equation}
 \mathbf F^\alpha = \int_{V} \rho^\alpha \mathbf b^\alpha \mathrm{d} V + \int_{\partial V} \mathbf t^\alpha \mathrm{d} A
 \label{e:externalforces}
+\end{equation}
 $$ 
 
 Cauchy’s stress tensor $$ \mathbf \sigma^\alpha $$ and the surface tractions $$ \mathbf t^\alpha $$ of phase $$ \alpha $$ are related by
 
 $$
+\begin{equation}
 \mathbf t^\alpha = \mathbf \sigma^\alpha \mathbf n
+\end{equation}
 $$ 
 
-where $$ \mathbf n $$ is an outward unit normal vector on the boundary. Using , applying the divergence theorem and considering the mass balance principle, the linear momentum balance equation for phase $$ \alpha $$ becomes
+where $$ \mathbf n $$ is an outward unit normal vector on the boundary. Using \ref{e:transporttheorem}, applying the divergence theorem and considering the mass balance principle, the linear momentum balance equation for phase $$ \alpha $$ becomes
 
 $$
+\begin{equation}
 \nabla \cdot \mathbf \sigma^\alpha + \rho^\alpha \mathbf b^\alpha + \sum_{\beta} \mathbf P^{\beta\alpha} = \rho^\alpha \mathbf a^\alpha.
 \label{e:mombalalpha}
+\end{equation}
 $$
 
 The overall linear momentum balance equation for the mixture with $$ N $$ constituents is obtained by summation of the individual phase equations i.e.
 
 $$
+\begin{equation}
 \sum\limits_{\alpha=1}^{N} \left[ \nabla \cdot \mathbf \sigma^\alpha + \rho^\alpha \mathbf b^\alpha + \sum_{\beta} \mathbf P^{\beta\alpha} \right] = \sum\limits_{\alpha=1}^{N} \rho^\alpha \mathbf a^\alpha.
 \label{e:genmombal}
+\end{equation}
 $$
 
 The sums of the partial stresses, body forces and acceleration can be represented by their total equivalents:
 
 $$
+\begin{equation}
 \sum\limits_{\alpha=1}^{N} \mathbf \sigma^\alpha = \mathbf \sigma, \quad \sum\limits_{\alpha=1}^{N} \rho^\alpha \mathbf b^\alpha = \rho \mathbf b \quad \text{and} \quad \sum\limits_{\alpha=1}^{N} \rho^\alpha \mathbf a^\alpha = \rho \mathbf a.
 \label{e:partialandtotalsums}
+\end{equation}
 $$ 
 
 The internal exchange of momentum between the phases is required to satisfy the constraint
 
 $$
+\begin{equation}
 \sum\limits_{\alpha=1}^{N} \sum_{\beta} \mathbf P^{\beta\alpha} = 0.
 \label{e:momexchangeconstraint}
+\end{equation}
 $$ 
 
-Using  and  in , the linear momentum balance equation for the mixture becomes
+Using \ref{e:partialandtotalsums} and \ref{e:momexchangeconstraint} in \ref{e:genmombal}, the linear momentum balance equation for the mixture becomes
 
 $$
+\begin{equation}
 \nabla \cdot \mathbf \sigma + \rho \mathbf b = \rho \mathbf a.
+\end{equation}
 $$ 
 
 For a static condition ($$ \mathbf a = \mathbf 0 $$), this reduces to
 
 $$
+\begin{equation}
 \nabla \cdot \mathbf \sigma + \rho \mathbf b = \mathbf 0.
+\end{equation}
 $$
 
 ## Angular Momentum Balance
