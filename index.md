@@ -44,16 +44,20 @@ One of the most important concepts in the development of porous media theory is 
 Consider a porous medium composed of $$ N $$ constituents. Let $$ V $$ be the total volume of he porous medium and $$ V^\alpha $$ be the volume of phase $$ \alpha $$. Let $$ \mathrm{d}V $$ be a control volume element in the total volume and $$ \mathbf x $$ be its position vector in a global coordinate system at a given time $$ t $$. Similarly, let $$ \mathbf r $$ be the position vector of a microscopic volume element $$ \mathrm{d} V_\mathrm{\beta} $$ inside $$ \mathrm{d}V  $$. The volume of constituent $$ \alpha $$ within the control volume can be determined by first defining a phase distribution function $$ \chi^\alpha $$ such that 
 
 $$
+\begin{equation}
 \chi^\alpha(\mathbf r, t) = \begin{cases}
 1 & \text{for} \quad \mathbf r \in \mathrm{d} V_\mathrm{\beta} \\
 0 & \text{for} \quad \mathbf r \in \mathrm{d} V_\mathrm{\gamma}, \quad \beta \neq \gamma.
 \end{cases}
+\end{equation}
 $$ 
 
 Thus, the partial volume of constituent $$ \alpha $$ in the control volume can be written as
 
 $$
+\begin{equation}
 \mathrm{d} V^\alpha(\mathbf x,t) =\int_{\mathrm{d} V} \chi^\alpha(\mathbf r, t) \mathrm{d} V_\mathrm{\beta}.
+\end{equation}
 $$
 
 The volume fraction $$ n^\alpha $$ of phase $$ \alpha $$ can now be defined as

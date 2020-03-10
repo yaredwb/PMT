@@ -1,20 +1,14 @@
 {% if page.mathjax %}
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    showProcessingMessages: false,
-    messageStyle: 'none',
-    tex2jax: {      
-      displayMath: [['$$','$$']],
-      processEnvironments: false
-    },
-    // show equation numbers
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    }
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
   });
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
 </script>
 {% endif %}
 
