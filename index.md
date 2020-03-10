@@ -149,7 +149,7 @@ $$
 \end{equation}
 $$
 
-Equations \eqref{e:mtdwrtalpha} and \eqref{e:mtdwrtbeta} result in the relation
+Equations $$ \eqref{e:mtdwrtalpha} $$ and $$ \eqref{e:mtdwrtbeta} $$ result in the relation
 
 $$
 \begin{equation}
