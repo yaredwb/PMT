@@ -63,25 +63,33 @@ $$
 The volume fraction $$ n^\alpha $$ of phase $$ \alpha $$ can now be defined as
 
 $$
+\begin{equation}
 n^\alpha (\mathbf x,t) = \frac{\mathrm{d} V^\alpha}{\mathrm{d} V} = \frac{1}{\mathrm{d} V} \int_{\mathrm{d} V} \chi^\alpha(\mathbf r, t) \mathrm{d} V_\mathrm{\beta}.
+\end{equation}
 $$
 
 The position vector $$ \mathbf r $$ may be written in terms of the global position vector $$ \mathbf x $$ by introducing a local reference system $$ \mathbf \xi $$ with origin at $$ \mathbf x $$, such that $$ \mathbf r = \mathbf x + \mathbf \xi $$. The individual volumes of the constituents and their volume fractions satisfy the conditions
 
 $$
+\begin{equation}
 \sum\limits_{\alpha=1}^{N} \mathrm{d} V^\alpha = \mathrm{d} V \quad \text{and} \quad \sum\limits_{\alpha=1}^{N} n^\alpha = 1.
+\end{equation}
 $$
 
 The volume fractions can now be used to describe the relationship between the densities of the constituents of the porous medium at microscopic and macroscopic levels. We denote the intrinsic real density of constituent $$ \alpha $$ by $$ \rho_\alpha $$ and the partial density at macroscale by $$ \rho^\alpha $$, following the notations according to Prevost (1980)[^7]. The relationship between these two densities in terms of the volume fraction of the phase under consideration is given by 
 
 $$
+\begin{equation}
 \rho^\alpha(\mathbf x,t) = n^\alpha(\mathbf x,t) \rho_\alpha(\mathbf x,t). \label{e:partialdensities}
+\end{equation}
 $$ 
 
 The total density of the mixture $$ \rho $$ is then the sum of the partial densities of all constituents i.e.
 
 $$
+\begin{equation}
 \rho(\mathbf x,t) = \sum\limits_{\alpha=1}^{N} \rho^\alpha(\mathbf x,t).
+\end{equation}
 $$
 
 # Kinematics
@@ -91,55 +99,71 @@ Kinematic relations describing the relative motions of the phases in a porous me
 According to the volume fraction concept, a porous medium composed of $$ N $$ constituents is approximated as a homogeneous continuum. Thus, a material point defined by the position vector $$ \mathbf x $$ is simultaneously occupied by all phases. Let $$ \mathbf X^\alpha $$ be the reference position of phase $$ \alpha $$ at time $$ t=t_\mathrm{o} $$. The position of each material point $$ \mathbf x^\alpha $$ of phase $$ \alpha $$ at time $$ t $$ may be written in a Lagrangian description as
 
 $$
+\begin{equation}
 \mathbf x^\alpha = \mathbf x^\alpha(\mathbf X^\alpha,t).
+\end{equation}
 $$
 
 An Eulerian description of motion may be written for a non-singular Lagrangian description as
 
 $$
+\begin{equation}
 \mathbf X^\alpha = \mathbf X^\alpha(\mathbf x^\alpha,t).
+\end{equation}
 $$ 
 
 For a particle of phase $$ \alpha $$ with a defined path, Lagrangian descriptions of the elocity and acceleration are 
 
 $$
+\begin{equation}
 \begin{aligned}
 \mathbf V^\alpha &= \frac{\partial \mathbf x^\alpha(\mathbf X^\alpha,t)}{\partial t} \\
 \mathbf A^\alpha &= \frac{\partial^2 \mathbf x^\alpha(\mathbf X^\alpha,t)}{\partial t^2}.
 \end{aligned}
+\end{equation}
 $$ 
 
 Eulerian description of the velocity and acceleration may be derived by using \ref{e:xalpha} in . Given an Eulerian description of the velocity $$ \mathbf v^\alpha(\mathbf x^\alpha,t) $$, the Eulerian acceleration $$ \mathbf a^\alpha $$ may be derived by evaluating the time derivative of the velocity where the Lagrangian coordinates are held constant. That is, by applying the chain rule
 
 $$
+\begin{equation}
 \mathbf a^\alpha = \frac{\partial \mathbf v^\alpha}{\partial t} + \nabla \mathbf v^\alpha \cdot \mathbf v^\alpha.
+\end{equation}
 $$
 
 For any differentiable function $$ f^\alpha $$ describing some physical property of phase $$ \alpha $$ in the porous medium, the *material time derivative* (also called *convective derivative* or *Lagrangian derivative*) is introduced to describe its rate of change relative to a chosen phase. If the Eulerian description of $$ f^\alpha =  f^\alpha (\mathbf x^\alpha,t) $$ is given, its material time derivative with respect to a moving particle of phase $$ \alpha $$ is defined by 
 
 $$
+\begin{equation}
 \frac{\mathrm{D}_\alpha f^\alpha}{\mathrm{D} t} := \frac{\partial f^\alpha}{\partial t} + \nabla f^\alpha \cdot \mathbf v^\alpha.
 \label{e:mtdwrtalpha}
+\end{equation}
 $$
 
 The material time derivative of $$ f^\alpha $$ with respect to a moving particle of another phase, say phase $$ \beta $$, is defined as
 
 $$
+\begin{equation}
 \frac{\mathrm{D}_\beta f^\alpha}{\mathrm{D} t} := \frac{\partial f^\alpha}{\partial t} + \nabla f^\alpha \cdot \mathbf v^\beta.
 \label{e:mtdwrtbeta}
+\end{equation}
 $$
 
-Equations ? and ? result in the relation
+Equations \eqref{e:mtdwrtalpha} and \eqref{e:mtdwrtbeta} result in the relation
 
 $$
+\begin{equation}
 \frac{\mathrm{D}_\beta f^\alpha}{\mathrm{D} t} = \frac{\mathrm{D}_\alpha f^\alpha}{\mathrm{D} t} + \nabla f^\alpha \cdot \mathbf v^{\beta \alpha}
 \label{e:mtdwrtbetarel}
+\end{equation}
 $$
 
 where
 
 $$
+\begin{equation}
 \mathbf v^{\beta \alpha} = \mathbf v^\beta - \mathbf v^\alpha
+\end{equation}
 $$
 
 is the relative velocity of a particle of phase $$ \beta $$ with respect to phase $$ \alpha $$.The material time derivative may be applied to either a scalar or a vector quantity.
@@ -147,23 +171,29 @@ is the relative velocity of a particle of phase $$ \beta $$ with respect to phas
 In porous media theory, we often require the rate of change of volume averaged quantities. For a vector physical property $$ \mathbf f^\alpha $$ of phase $$ \alpha $$ per unit volume, the total time derivative over a volume $$ V $$ is given according to Reynold’s transport theorem by
 
 $$
+\begin{equation}
 \begin{aligned}
 \frac{d}{dt} \int_{V} \mathbf f^\alpha \mathrm{d} V &= \int_{V} \left( \frac{\partial \mathbf f^\alpha}{\partial t} + \nabla \mathbf f^\alpha \cdot \mathbf v^\alpha + \mathbf f^\alpha \nabla \cdot \mathbf v^\alpha \right) \mathrm{d} V \\
 &= \int_{V} \left[ \frac{\partial \mathbf f^\alpha}{\partial t} + \nabla \cdot \left( \mathbf f^\alpha \otimes \mathbf v^\alpha \right)  \right] \mathrm{d} V.
 \end{aligned}
 \label{e:transporttheorem}
+\end{equation}
 $$ 
 
 For a scalar physical property $$ f^\alpha $$ per unit volume, we have
 
 $$
+\begin{equation}
 \frac{d}{dt} \int_{V} f^\alpha \mathrm{d} V = \int_{V} \left[ \frac{\partial f^\alpha}{\partial t} + \nabla \cdot \left( f^\alpha \mathbf v^\alpha \right)  \right] \mathrm{d} V.
+\end{equation}
 $$
 
 Applying the divergence theorem, we get the expression
 
 $$
+\begin{equation}
 \frac{d}{dt} \int_{V} f^\alpha \mathrm{d} V = \int_{V} \frac{\partial f^\alpha}{\partial t} \mathrm{d} V + \int_{\partial V} f^\alpha \mathbf v^\alpha \cdot \mathbf n \mathrm{d} A
+\end{equation}
 $$
 
 where $$ \partial V $$ is the boundary of the domain $$ V $$ and $$ \mathbf n $$ is the outward unit normal to the surface $$ \mathrm{d} A $$.
@@ -171,19 +201,25 @@ where $$ \partial V $$ is the boundary of the domain $$ V $$ and $$ \mathbf n $$
 The spatial velocity gradient of phase $$ \alpha $$,
 
 $$
+\begin{equation}
 \mathbf L^\alpha = \nabla \mathbf v^\alpha,
+\end{equation}
 $$ 
 
 can be decomposed into symmetric and skew-symmetric parts as
 
 $$
+\begin{equation}
 \mathbf L^\alpha = \mathbf D^\alpha + \mathbf W^\alpha,
+\end{equation}
 $$ 
 
 where $$ \mathbf D^\alpha $$ and $$ \mathbf W^\alpha $$ are the rate of deformation and spin tensors, respectively, which may be expressed as
 
 $$
+\begin{equation}
 \mathbf D^\alpha = \frac{1}{2} (\mathbf L^\alpha + {\mathbf L^\alpha}^\intercal) \quad \text{and} \quad \mathbf W^\alpha = \frac{1}{2} (\mathbf L^\alpha - {\mathbf L^\alpha}^\intercal).
+\end{equation}
 $$
 
 # Conservation Laws
