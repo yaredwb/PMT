@@ -1211,7 +1211,7 @@ Defining the effective heat capacity of the medium as
 
 $$
 \begin{equation}
-(\rho c)_\mathrm{e}f = \rho^\mathrm{s} c_\mathrm{s} + \rho^\mathrm{f} c_\mathrm{f} = (1-n)\rho_\mathrm{s} c_\mathrm{s} + n \rho_\mathrm{f} c_\mathrm{f}
+(\rho c)_\mathrm{eff} = \rho^\mathrm{s} c_\mathrm{s} + \rho^\mathrm{f} c_\mathrm{f} = (1-n)\rho_\mathrm{s} c_\mathrm{s} + n \rho_\mathrm{f} c_\mathrm{f}
 \end{equation}
 $$
 
@@ -1220,7 +1220,7 @@ velocity, \eqref{e:enebalTHM2} is further simplified to obtain the energy balan
 
 $$
 \begin{equation}
-(\rho c)_\mathrm{e}f \frac{\mathrm{D}_\mathrm{s} T}{\mathrm{D} t} + \rho_\mathrm{f} c_\mathrm{f}  \mathbf w \cdot \nabla T + \nabla \cdot \mathbf q = Q.
+(\rho c)_\mathrm{eff} \frac{\mathrm{D}_\mathrm{s} T}{\mathrm{D} t} + \rho_\mathrm{f} c_\mathrm{f}  \mathbf w \cdot \nabla T + \nabla \cdot \mathbf q = Q.
 \label{e:enebalTHM3}
 \end{equation}
 $$ 
@@ -1237,7 +1237,7 @@ For the applications of interest in this thesis, the convective heat flux in the
 
 $$
 \begin{equation}
-(\rho c)_\mathrm{e}f \frac{\partial T}{\partial t} + \rho_\mathrm{f} c_\mathrm{f}  \mathbf w \cdot \nabla T - \nabla \cdot (\mathbf \lambda \nabla T) = Q.
+(\rho c)_\mathrm{eff} \frac{\partial T}{\partial t} + \rho_\mathrm{f} c_\mathrm{f}  \mathbf w \cdot \nabla T - \nabla \cdot (\mathbf \lambda \nabla T) = Q.
 \label{e:enebalTHM}
 \end{equation}
 $$
