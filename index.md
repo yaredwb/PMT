@@ -5,7 +5,7 @@ bibliography: pmt.bib
 mathjax: true
 ---
 
-#### Author: [Yared W. Bekele](https://yaredwb.com/)
+#### Author: [Yared W. Bekele](https://yaredwb.github.io/)
 {:.no_toc}
 
 **Contents**
